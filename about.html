@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOCORE | About Our Mission</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="home-2">
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">AUTO<span>CORE</span></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Home <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="index2.html">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Dashboard <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="dashboard.html">User Dashboard</a>
+                        <a href="admin_dashboard.html">Admin Dashboard</a>
+                    </div>
+                </li>
+                <li class="mobile-only"><a href="login.html" class="nav-login">Login</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="login-btn desktop-only">Login</a>
+                <button id="rtl-toggle" title="Toggle LTR/RTL">
+                    <i class="fas fa-globe"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Vortex Hero (About Edition) -->
+        <section id="vortex-hero" class="v-section"
+            style="background: linear-gradient(135deg, rgba(10, 12, 14, 0.95) 0%, rgba(10, 12, 14, 0.8) 100%), url('https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat; padding-top: 180px; padding-bottom: 80px; min-height: auto;">
+            <div class="hud-overlay" style="opacity: 0.4;">
+                <div class="hud-circle reveal"></div>
+                <div class="hud-scanner"></div>
+            </div>
+            <div class="container hero-layout" style="align-items: flex-start; margin-top: 0;">
+                <div class="hero-content reveal" style="padding-top: 0;">
+                    <div class="status-badge" style="margin-bottom: 1.5rem;"><span class="pulse"></span> ORIGINS
+                        ACCESSED</div>
+                    <h1 style="text-shadow: 0 0 20px rgba(0, 212, 255, 0.5); line-height: 1.1; margin-bottom: 1rem;">OUR
+                        <span>ORIGINS</span>
+                    </h1>
+                    <p style="font-size: 1.2rem; margin-bottom: 2rem;">The architects behind the machines. Forged in
+                        precision. Driven by obsession. We are the architects of motion.</p>
+                    <div class="cta-group" style="display: flex; gap: 1rem;">
+                        <a href="#mission-vision" class="btn btn-primary">DISCOVER PURPOSE</a>
+                    </div>
+                </div>
+                <div class="hero-visual reveal delay-2"
+                    style="position: relative; display: flex; justify-content: center; align-items: flex-start; margin-top: -2rem;">
+                    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=800"
+                        alt="Origins"
+                        style="border-radius: 12px; border: 1px solid var(--glass-border); max-width: 100%; box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2); filter: contrast(1.1) saturate(1.2);">
+
+                    <!-- Decorative Corners -->
+                    <div
+                        style="position: absolute; top: -15px; right: -15px; width: 60px; height: 60px; border-top: 3px solid var(--accent); border-right: 3px solid var(--accent); opacity: 0.8;">
+                    </div>
+                    <div
+                        style="position: absolute; bottom: -15px; left: -15px; width: 60px; height: 60px; border-bottom: 3px solid #00ff88; border-left: 3px solid #00ff88; opacity: 0.8;">
+                    </div>
+
+                    <!-- Floating Data Card -->
+                    <div class="hud-data-card bottom-right"
+                        style="position: absolute; bottom: 30px; right: -20px; background: rgba(10, 12, 14, 0.95); border: 1px solid var(--accent); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                        <small
+                            style="color: var(--text-muted); font-family: var(--font-heading); letter-spacing: 1px;">VISION
+                            CLARITY</small>
+                        <div class="value" style="color: var(--accent); font-size: 1.5rem;">OPTIMAL</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Mission Statement (Split Layout) -->
+        <section id="mission-vision" class="v-section">
+            <div class="container">
+                <div class="split-layout" style="align-items: center;">
+                    <div class="mission-content reveal">
+                        <div class="status-badge"><i class="fas fa-crosshairs"></i> CORE DIRECTIVE</div>
+                        <h2 class="section-title">PURPOSE <span>DRIVEN</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Autocore exists at
+                            the intersection of mechanical purity and digital intelligence. We refuse the compromise of
+                            factory settings.</p>
+                        <div class="mission-cards" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Card 1 -->
+                            <div
+                                style="background: var(--bg-card); border: 1px solid var(--glass-border); border-left: 3px solid var(--accent); padding: 1.2rem 1.5rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem; transition: var(--transition);">
+                                <div
+                                    style="color: var(--accent); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(0, 212, 255, 0.1); border-radius: 50%;">
+                                    <i class="fas fa-tachometer-alt"></i>
+                                </div>
+                                <h4
+                                    style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin: 0; font-weight: 500;">
+                                    Elevate performance dynamically.</h4>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div
+                                style="background: var(--bg-card); border: 1px solid var(--glass-border); border-left: 3px solid var(--primary); padding: 1.2rem 1.5rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem; transition: var(--transition);">
+                                <div
+                                    style="color: var(--primary); font-size: 1.5rem; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255, 94, 0, 0.1); border-radius: 50%;">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <h4
+                                    style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin: 0; font-weight: 500;">
+                                    Secure vehicle telemetry autonomously.</h4>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div
+                                style="background: var(--bg-card); border: 1px solid var(--glass-border); border-left: 3px solid #00ff88; padding: 1.2rem 1.5rem; border-radius: 8px; display: flex; align-items: center; gap: 1rem; transition: var(--transition);">
+                                <div
+                                    style="color: #00ff88; font-size: 1.5rem; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(0, 255, 136, 0.1); border-radius: 50%;">
+                                    <i class="fas fa-network-wired"></i>
+                                </div>
+                                <h4
+                                    style="color: #fff; font-family: var(--font-heading); font-size: 1.05rem; margin: 0; font-weight: 500;">
+                                    Redefine the driving architecture.</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-media reveal delay-1 desktop-only"
+                        style="flex: 1; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
+                        <img src="https://images.unsplash.com/photo-1503375895420-53a5c2ac7f98?auto=format&fit=crop&q=80&w=1200"
+                            alt="Precision Engineering" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Evolution Timeline -->
+        <section id="evolution-timeline" class="v-section"
+            style="background: rgba(0, 212, 255, 0.02); text-align: center;">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">THE <span>EVOLUTION</span></h2>
+                    <p>Milestones that fractured the status quo.</p>
+                </div>
+
+                <div class="timeline-container"
+                    style="display: flex; flex-direction: column; gap: 3rem; position: relative; max-width: 800px; margin: 3rem auto 0; padding-left: 2rem; border-left: 2px solid var(--glass-border);">
+                    <div class="timeline-node reveal" style="position: relative; text-align: left;">
+                        <span class="timeline-dot"
+                            style="position: absolute; left: -2.6rem; top: 0; width: 20px; height: 20px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 10px var(--accent);"></span>
+                        <h3 style="color: var(--accent); font-family: var(--font-heading); margin-bottom: 0.5rem;">2018
+                            | GENESIS</h3>
+                        <p style="color: var(--text-muted);">Autocore founded in a small garage by former aerospace
+                            engineers aiming to decode proprietary ECUs.</p>
+                    </div>
+
+                    <div class="timeline-node reveal delay-1" style="position: relative; text-align: left;">
+                        <span class="timeline-dot"
+                            style="position: absolute; left: -2.6rem; top: 0; width: 20px; height: 20px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 10px var(--primary);"></span>
+                        <h3 style="color: var(--primary); font-family: var(--font-heading); margin-bottom: 0.5rem;">2021
+                            | VORTEX ENGINE</h3>
+                        <p style="color: var(--text-muted);">Launch of our proprietary diagnostic software, setting a
+                            new industry standard for real-time telemetry.</p>
+                    </div>
+
+                    <div class="timeline-node reveal delay-2" style="position: relative; text-align: left;">
+                        <span class="timeline-dot"
+                            style="position: absolute; left: -2.6rem; top: 0; width: 20px; height: 20px; background: #00ff88; border-radius: 50%; box-shadow: 0 0 10px #00ff88;"></span>
+                        <h3 style="color: #00ff88; font-family: var(--font-heading); margin-bottom: 0.5rem;">2024 |
+                            GLOBAL NETWORK</h3>
+                        <p style="color: var(--text-muted);">Opened 5 state-of-the-art diagnostic facilities across 3
+                            continents, integrating AI-driven predictive maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Leadership & Master Architects -->
+        <section id="leadership" class="v-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">MASTER <span>ARCHITECTS</span></h2>
+                    <p>The minds engineering the future of performance.</p>
+                </div>
+                <div class="architect-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; margin-top: 3rem;">
+
+                    <div class="architect-card reveal"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; text-align: center; transition: var(--transition);">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400"
+                            alt="CEO"
+                            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 3px solid var(--primary);">
+                        <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">ALEX VANCE
+                        </h3>
+                        <p style="color: var(--primary); font-size: 0.9rem; margin-bottom: 1rem;">Chief Executive
+                            Officer</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Former aerospace telemetry director.
+                            Pioneered Autocore's unified diagnostic interface.</p>
+                    </div>
+
+                    <div class="architect-card reveal delay-1"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; text-align: center; transition: var(--transition);">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
+                            alt="CTO"
+                            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 3px solid var(--accent);">
+                        <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">DR. ELARA QIN
+                        </h3>
+                        <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 1rem;">Chief Technology
+                            Officer</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Ph.D. in AI Systems. Architect behind
+                            the Vortex Engine's predictive failure algorithms.</p>
+                    </div>
+
+                    <div class="architect-card reveal delay-2"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; text-align: center; transition: var(--transition);">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400"
+                            alt="Lead Engineer"
+                            style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; border: 3px solid #00ff88;">
+                        <h3 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">MARCUS REED
+                        </h3>
+                        <p style="color: #00ff88; font-size: 0.9rem; margin-bottom: 1rem;">Lead Performance Engineer</p>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Master mechanic with 15 years in GT
+                            racing. Translates raw data into track speed.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Global Facilities / Labs (Bento Grid) -->
+        <section id="facilities" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">GLOBAL <span>INFRASTRUCTURE</span></h2>
+                    <p>Where raw data is converted into physical speed.</p>
+                </div>
+
+                <div class="bento-grid about-lab-grid"
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(2, 250px); gap: 1rem; margin-top: 3rem;">
+
+                    <div class="bento-item large reveal"
+                        style="grid-column: span 2; grid-row: span 2; position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?auto=format&fit=crop&q=80&w=1200"
+                            alt="Main Lab"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: var(--transition);">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; padding: 2rem; width: 100%; background: linear-gradient(transparent, rgba(10, 12, 14, 0.9));">
+                            <h3 style="color: var(--accent); font-family: var(--font-heading);">NEXUS PRIME - NEVADA
+                            </h3>
+                            <p style="color: #fff;">Our 500,000 sq.ft. primary testing facility featuring 3 wind
+                                tunnels.</p>
+                        </div>
+                    </div>
+
+                    <div class="bento-item reveal delay-1"
+                        style="position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <!-- Desktop Placeholder -->
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&q=80&w=800"
+                            alt="Tokyo Lab Placeholder" class="desktop-only"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                        <!-- Mobile Specific Image -->
+                        <img src="tok.jpg" alt="Tokyo Lab Mobile" class="mobile-only"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; padding: 1.5rem; width: 100%; background: linear-gradient(transparent, rgba(10, 12, 14, 0.9));">
+                            <h4 style="color: var(--primary); font-family: var(--font-heading);">NODE ALPHA - TOKYO</h4>
+                        </div>
+                    </div>
+
+                    <div class="bento-item reveal delay-2"
+                        style="position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="https://images.unsplash.com/photo-1542125387-c71274d94f0a?auto=format&fit=crop&q=80&w=800"
+                            alt="Munich Hub" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; padding: 1.5rem; width: 100%; background: linear-gradient(transparent, rgba(10, 12, 14, 0.9));">
+                            <h4 style="color: #00ff88; font-family: var(--font-heading);">NODE BETA - MUNICH</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Core Values (Isometric Cards) -->
+        <section id="core-values" class="v-section">
+            <div class="container text-center">
+                <div class="section-header reveal">
+                    <h2 class="section-title">OUR <span>DIRECTIVES</span></h2>
+                    <p>The code that dictates every physical and digital action we take.</p>
+                </div>
+
+                <div class="isometric-grid" style="margin-top: 4rem;">
+
+                    <div class="iso-card iso-color-1 reveal" style="text-align: left;">
+                        <div class="iso-icon"><i class="fas fa-microscope"></i></div>
+                        <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem;">UNYIELDING
+                            PRECISION</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">We operate in micrometers and
+                            milliseconds. Estimations are the enemy of performance.</p>
+                    </div>
+
+                    <div class="iso-card iso-color-2 reveal delay-1" style="text-align: left;">
+                        <div class="iso-icon"><i class="fas fa-network-wired"></i></div>
+                        <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem;">RADICAL
+                            TRANSPARENCY</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Every line of data, every structural
+                            stress test is visible. Black boxes do not belong on the track.</p>
+                    </div>
+
+                    <div class="iso-card iso-color-3 reveal delay-2" style="text-align: left;">
+                        <div class="iso-icon"><i class="fas fa-bolt"></i></div>
+                        <h3 style="font-family: var(--font-heading); color: #fff; margin-bottom: 1rem;">RELENTLESS
+                            VELOCITY</h3>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Applied power is only as good as its
+                            delivery. We optimize for immediate, sustained kinetic output.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Engineering Philosophy (Split Layout) -->
+        <section id="engineering-philosophy" class="v-section" style="background: rgba(255, 94, 0, 0.02);">
+            <div class="container">
+                <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
+                    <div class="philosophy-content reveal">
+                        <div class="status-badge" style="background: var(--primary);"><i class="fas fa-cogs"></i>
+                            METHODOLOGY</div>
+                        <h2 class="section-title">THE AUTOCORE <span>METHOD</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">We do not guess.
+                            Our process is a rigorous cycle of data acquisition, algorithmic simulation, and physical
+                            validation. Every tune is a bespoke operating system for your engine.</p>
+
+                        <div class="process-steps" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                            <div class="step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div
+                                    style="color: var(--primary); font-size: 1.5rem; font-family: var(--font-heading);">
+                                    01</div>
+                                <div>
+                                    <h4 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.3rem;">
+                                        DATA ACQUISITION</h4>
+                                    <p style="color: var(--text-muted); font-size: 0.9rem;">Extracting raw telemetry
+                                        from over 1,500 ECU sensors.</p>
+                                </div>
+                            </div>
+                            <div class="step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="color: var(--accent); font-size: 1.5rem; font-family: var(--font-heading);">
+                                    02</div>
+                                <div>
+                                    <h4 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.3rem;">
+                                        SIMULATION MATRICES</h4>
+                                    <p style="color: var(--text-muted); font-size: 0.9rem;">Running millions of
+                                        predictive miles in our proprietary Vortex Engine.</p>
+                                </div>
+                            </div>
+                            <div class="step" style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="color: #00ff88; font-size: 1.5rem; font-family: var(--font-heading);">03
+                                </div>
+                                <div>
+                                    <h4 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.3rem;">
+                                        PHYSICAL VALIDATION</h4>
+                                    <p style="color: var(--text-muted); font-size: 0.9rem;">Dyno testing and track
+                                        verification to ensure real-world stability.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="testimonial-media reveal delay-1 desktop-only"
+                        style="flex: 1; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(255, 94, 0, 0.1);">
+                        <img src="https://images.unsplash.com/photo-1549646536-ea7826a7e04f?auto=format&fit=crop&q=80&w=1200"
+                            alt="Process Diagnostic" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Performance Partnerships (Logo Grid) -->
+        <section id="partnerships" class="v-section"
+            style="padding: 4rem 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border);">
+            <div class="container text-center">
+                <p
+                    style="font-family: var(--font-heading); font-size: 0.8rem; letter-spacing: 2px; color: var(--text-muted); margin-bottom: 2rem;">
+                    TRUSTED BY INDUSTRY TITANS</p>
+                <div class="partner-grid reveal"
+                    style="display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; opacity: 0.6;">
+                    <i class="fab fa-aws" style="font-size: 3rem; transition: var(--transition);"></i>
+                    <i class="fab fa-apple" style="font-size: 3rem; transition: var(--transition);"></i>
+                    <i class="fab fa-google" style="font-size: 3rem; transition: var(--transition);"></i>
+                    <i class="fab fa-microsoft" style="font-size: 3rem; transition: var(--transition);"></i>
+                    <i class="fab fa-ubuntu" style="font-size: 3rem; transition: var(--transition);"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Sustainability & Future Tech (Stats Grid) -->
+        <section id="sustainability" class="v-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">SUSTAINABLE <span>VELOCITY</span></h2>
+                    <p>Performance without planetary compromise.</p>
+                </div>
+
+                <div class="stats-grid"
+                    style="display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8rem; margin-top: 3rem; margin-right: 5%;">
+
+                    <div class="m-stat reveal"
+                        style="flex: 1 1 300px; max-width: 350px; background: var(--bg-card); padding: 3rem 2rem; border-top: 3px solid #00ff88; text-align: left;">
+                        <div
+                            style="font-size: 3.5rem; font-family: var(--font-heading); color: #00ff88; margin-bottom: 1rem;">
+                            2030</div>
+                        <h4 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">CARBON NEUTRAL
+                        </h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Target date for completely offsetting
+                            our global facility emissions.</p>
+                    </div>
+
+                    <div class="m-stat reveal delay-1"
+                        style="flex: 1 1 300px; max-width: 350px; background: var(--bg-card); padding: 3rem 2rem; border-top: 3px solid var(--accent); text-align: left;">
+                        <div
+                            style="font-size: 3.5rem; font-family: var(--font-heading); color: var(--accent); margin-bottom: 1rem;">
+                            85%</div>
+                        <h4 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">RECYCLED
+                            ALLOYS</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Utilization of repurposed
+                            aerospace-grade materials in bespoke parts.</p>
+                    </div>
+
+                    <div class="m-stat reveal delay-2"
+                        style="flex: 1 1 300px; max-width: 350px; background: var(--bg-card); padding: 3rem 2rem; border-top: 3px solid var(--primary); text-align: left;">
+                        <div
+                            style="font-size: 3.5rem; font-family: var(--font-heading); color: var(--primary); margin-bottom: 1rem;">
+                            1.2M</div>
+                        <h4 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">EV MILES
+                            SIMULATED</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Data collected to optimize the next
+                            generation of electric hypercars.</p>
+                    </div>
+
+                    <div class="m-stat reveal delay-3"
+                        style="flex: 1 1 300px; max-width: 350px; background: var(--bg-card); padding: 3rem 2rem; border-top: 3px solid #bf00ff; text-align: left;">
+                        <div
+                            style="font-size: 3.5rem; font-family: var(--font-heading); color: #bf00ff; margin-bottom: 1rem;">
+                            100%</div>
+                        <h4 style="color: #fff; font-family: var(--font-heading); margin-bottom: 0.5rem;">REGEN
+                            MATRICES</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem;">Energy recovered from testing cycles
+                            is re-injected into our local microgrid.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Community Driver Programs (Mosaic Grid) -->
+        <section id="community" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-title">THE <span>COLLECTIVE</span></h2>
+                    <p>Drivers, engineers, and enthusiasts pushing the limits together.</p>
+                </div>
+
+                <div class="dense-mosaic-grid"
+                    style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: 3rem;">
+
+                    <div class="mosaic-item reveal"
+                        style="grid-column: span 2; grid-row: span 2; height: 400px; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="https://images.unsplash.com/photo-1542128962-9d50ad7bf014?auto=format&fit=crop&q=80&w=1200"
+                            alt="Track Day"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.5); transition: var(--transition);">
+                    </div>
+
+                    <div class="mosaic-item reveal delay-1"
+                        style="height: 195px; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="c5.jpg" alt="Engine Build"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.5); transition: var(--transition);">
+                    </div>
+
+                    <div class="mosaic-item reveal delay-2"
+                        style="height: 195px; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="c4.jpg" alt="Night Meet"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.5); transition: var(--transition);">
+                    </div>
+
+                    <div class="mosaic-item reveal delay-3"
+                        style="grid-column: span 2; height: 195px; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="c2.jpg" alt="Rally Stage"
+                            style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(0.5); transition: var(--transition);">
+                    </div>
+
+                </div>
+                <div class="text-center" style="margin-top: 3rem;">
+                    <a href="#" class="btn btn-outline reveal">JOIN THE DISCORD</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: System Queries (FAQ) -->
+        <section id="faq" class="v-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">SYSTEM <span>QUERIES</span></h2>
+                    <p>Decoded answers to common operational questions.</p>
+                </div>
+
+                <div class="faq-grid" style="display: grid; gap: 1rem; max-width: 800px; margin: 3rem auto 0;">
+
+                    <div class="faq-node reveal"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem 2rem; border-radius: 8px; cursor: pointer; transition: var(--transition);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h4 style="color: #fff; font-family: var(--font-heading); margin: 0;">Does tuning void my
+                                warranty?</h4>
+                            <i class="fas fa-plus" style="color: var(--accent);"></i>
+                        </div>
+                        <div class="faq-answer"
+                            style="display: none; color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                            Autocore offers both hard-flashes and piggyback systems. Our piggyback ECUs can be removed
+                            flawlessly before dealer servicing, maintaining your original warranty intact.
+                        </div>
+                    </div>
+
+                    <div class="faq-node reveal delay-1"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem 2rem; border-radius: 8px; cursor: pointer; transition: var(--transition);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h4 style="color: #fff; font-family: var(--font-heading); margin: 0;">How long does a Vortex
+                                Scan take?</h4>
+                            <i class="fas fa-plus" style="color: var(--accent);"></i>
+                        </div>
+                        <div class="faq-answer"
+                            style="display: none; color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                            A standard telemetry pull takes 45 minutes. A deep structural analysis involving dyno pulls
+                            and thermal imaging takes up to 4 hours.
+                        </div>
+                    </div>
+
+                    <div class="faq-node reveal delay-2"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1.5rem 2rem; border-radius: 8px; cursor: pointer; transition: var(--transition);">
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <h4 style="color: #fff; font-family: var(--font-heading); margin: 0;">Do you tune electric
+                                vehicles (EVs)?</h4>
+                            <i class="fas fa-plus" style="color: var(--accent);"></i>
+                        </div>
+                        <div class="faq-answer"
+                            style="display: none; color: var(--text-muted); font-size: 0.95rem; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                            Yes. We rewrite power delivery algorithms for dual-motor systems to favor raw acceleration
+                            or sustained endurance, depending on driver preference.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <script>
+                // Simple FAQ toggle script specifically for this section
+                document.querySelectorAll('.faq-node').forEach(node => {
+                    node.addEventListener('click', () => {
+                        const answer = node.querySelector('.faq-answer');
+                        const icon = node.querySelector('i');
+
+                        if (answer.style.display === 'block') {
+                            answer.style.display = 'none';
+                            icon.classList.remove('fa-minus');
+                            icon.classList.add('fa-plus');
+                        } else {
+                            // Close others
+                            document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
+                            document.querySelectorAll('.faq-node i').forEach(i => {
+                                i.classList.remove('fa-minus');
+                                i.classList.add('fa-plus');
+                            });
+
+                            // Open current
+                            answer.style.display = 'block';
+                            icon.classList.remove('fa-plus');
+                            icon.classList.add('fa-minus');
+                        }
+                    });
+                });
+            </script>
+        </section>
+
+        <!-- Section 12: Join the Mission (Call to Action) -->
+        <section id="join-mission" class="v-section"
+            style="background: linear-gradient(135deg, rgba(10, 12, 14, 0.95), rgba(77, 28, 0, 0.8)), url('https://images.unsplash.com/photo-1541348263662-e068f62f4a58?auto=format&fit=crop&q=80&w=2000'); background-size: cover; background-position: center; border-radius: 20px; margin: 4rem 2rem; padding: 6rem 2rem; text-align: center; border: 1px solid var(--accent);">
+            <div class="container">
+                <div class="cta-content reveal">
+                    <h2 class="section-title" style="margin-bottom: 1.5rem;">READY TO <span>ESCALATE?</span></h2>
+                    <p style="font-size: 1.2rem; color: #fff; max-width: 600px; margin: 0 auto 3rem;">Join the elite
+                        tier of drivers who refuse to compromise. Your engine's true potential is waiting to be
+                        unlocked.</p>
+                    <a href="contact.html" class="btn btn-primary"
+                        style="font-size: 1.1rem; padding: 1rem 3rem;">INITIALIZE CONTACT</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 20: Mega Footer -->
+        <footer id="mega-footer">
+            <div class="container footer-grid">
+                <div class="footer-col reveal">
+                    <div class="logo">
+                        <a href="#">AUTO<span>CORE</span></a>
+                    </div>
+                    <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
+                </div>
+                <div class="footer-col reveal delay-1">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="index2.html">Home 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col reveal delay-2">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Precision Dr, Engine City</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 800-AUTODOC</li>
+                        <li><i class="fas fa-envelope"></i> missions@autocore.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col reveal delay-3">
+                    <h4>Stay Synced</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email for updates">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AUTOCORE Precision Center. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

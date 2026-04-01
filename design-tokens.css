@@ -1,0 +1,25 @@
+:root {
+    /* Rugged Color Palette */
+    --bg-dark: #0f1113;
+    --bg-card: #1a1d20;
+    --primary: #ff5e00; /* Safety Orange */
+    --primary-hover: #e65500;
+    --secondary: #2c3136;
+    --accent: #ffd700; /* Tool Gold */
+    --text-main: #e0e0e0;
+    --text-muted: #8e959c;
+    --glass-bg: rgba(26, 29, 32, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    
+    /* Typography */
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Effects */
+    --glow: 0 0 15px rgba(255, 94, 0, 0.4);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[dir="rtl"] {
+    --font-body: 'Tajawal', sans-serif; /* Recommended for Arabic RTL */
+}

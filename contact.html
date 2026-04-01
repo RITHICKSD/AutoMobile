@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT | AUTOCORE Precision Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body>
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">AUTO<span>CORE</span></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Home <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="index2.html">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Dashboard <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="dashboard.html">User Dashboard</a>
+                        <a href="admin_dashboard.html">Admin Dashboard</a>
+                    </div>
+                </li>
+                <li class="mobile-only"><a href="login.html" class="nav-login">Login</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="login-btn desktop-only">Login</a>
+                <button id="rtl-toggle" title="Toggle LTR/RTL">
+                    <i class="fas fa-globe"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Mission Control (Hero) -->
+        <section id="contact-hero" class="v-section" style="min-height: 80vh; padding-top: 120px; position: relative;">
+            <div class="hero-bg-container"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: linear-gradient(rgba(15,17,19,0.7), rgba(15,17,19,0.9)), url('cont.jpg'); background-size: cover; background-position: center;">
+            </div>
+            <div class="container" style="text-align: center; position: relative; z-index: 1;">
+                <h1 class="reveal" style="font-size: 4rem; margin-bottom: 1.5rem;">MISSION <span>CONTROL</span></h1>
+                <p class="reveal delay-1"
+                    style="max-width: 700px; margin: 0 auto 2rem; color: var(--text-muted); font-size: 1.1rem; font-family: var(--font-heading);">
+                    Direct uplink to our master technicians. Establish a secure connection for your vehicle's next
+                    mission. Resolution in progress.
+                </p>
+                <div class="reveal delay-2">
+                    <a href="#field-report" class="btn btn-primary">Initiate Uplink</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: HQ Briefing (HQ Grid) -->
+        <section id="hq-briefing" class="v-section" style="background: var(--bg-card);">
+            <div class="container">
+                <div class="grid-3">
+                    <div class="data-card reveal">
+                        <i class="fas fa-map-marked-alt"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem;">STRATEGIC HQ</h3>
+                        <p style="color: var(--text-muted);">123 Precision Dr, Area 51<br>Engine City, EC 9901</p>
+                    </div>
+                    <div class="data-card reveal delay-1">
+                        <i class="fas fa-clock"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem;">OPS HOURS</h3>
+                        <p style="color: var(--text-muted);">Mon - Fri: 0800 - 2000<br>Sat: 0900 - 1500</p>
+                    </div>
+                    <div class="data-card reveal delay-2">
+                        <i class="fas fa-shield-alt"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h3 style="margin-bottom: 1rem;">SECURITY</h3>
+                        <p style="color: var(--text-muted);">Master Technicians Only<br>Secured Perimeter</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Tactical Map (Visual) -->
+        <section id="tactical-map" class="v-section" style="padding: 0;">
+            <div style="width: 100%; height: 500px; background: #0a0c0e; position: relative;">
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2000"
+                    alt="Map View"
+                    style="width:100%; height:100%; object-fit:cover; opacity: 0.4; filter: grayscale(100%) contrast(120%);">
+                <div class="map-overlay"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+                    <div class="pulse-ring"></div>
+                    <i class="fas fa-crosshairs" style="font-size: 3rem; color: var(--primary);"></i>
+                    <h4 style="margin-top: 1rem; color: #fff; letter-spacing: 2px;">HQ TARGET LOCKED</h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Comm Uplink (Comm Channels) -->
+        <section id="comm-uplink" class="v-section">
+            <div class="container">
+                <div class="grid-3">
+                    <a href="tel:1-800-AUTODOC" class="glass-card reveal"
+                        style="text-decoration: none; text-align: center;">
+                        <i class="fas fa-phone-volume"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+                        <h3>VOICE COMS</h3>
+                        <p style="color:var(--primary); font-weight: 700; margin-top: 0.5rem;">1-800-AUTODOC</p>
+                    </a>
+                    <a href="mailto:missions@autocore.com" class="glass-card reveal delay-1"
+                        style="text-decoration: none; text-align: center;">
+                        <i class="fas fa-envelope-open-text"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+                        <h3>DATA TRANSFER</h3>
+                        <p style="color:var(--primary); font-weight: 700; margin-top: 0.5rem;">missions@autocore.com</p>
+                    </a>
+                    <div class="glass-card reveal delay-2" style="text-align: center;">
+                        <i class="fab fa-signal"
+                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
+                        <h3>LIVE SIGNAL</h3>
+                        <p style="color:var(--primary); font-weight: 700; margin-top: 0.5rem;">SECURED CHAT ENCRYPTED
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Field Report (Direct Transmission Form) -->
+        <section id="field-report" class="v-section" style="background: rgba(255, 94, 0, 0.03);">
+            <div class="container" style="max-width: 900px;">
+                <div class="reveal">
+                    <h2 class="section-title">FIELD <span>REPORT</span></h2>
+                    <form class="booking-form"
+                        style="background: var(--bg-card); padding: 3rem; border: 1px solid var(--glass-border);">
+                        <div class="form-grid">
+                            <div class="form-group icon-input">
+                                <i class="fas fa-user"></i>
+                                <input type="text" placeholder="AGENT NAME" required>
+                            </div>
+                            <div class="form-group icon-input">
+                                <i class="fas fa-id-badge"></i>
+                                <input type="text" placeholder="VIN / LICENSE" required>
+                            </div>
+                        </div>
+                        <div class="form-group icon-input">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" placeholder="ENCRYPTED EMAIL" required>
+                        </div>
+                        <div class="form-group icon-input">
+                            <i class="fas fa-pen"></i>
+                            <textarea rows="5" placeholder="MISSION OBJECTIVES / SYMPTOMS" required
+                                style="width: 100%; background: #1a1d20; border: 1px solid #2c3136; color: #fff; padding: 1rem 1rem 1rem 3rem; font-family: var(--font-body);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">SEND TRANSMISSION</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Emergency Extraction (Roadside) -->
+        <section id="emergency-extraction" class="v-section dark-accent"
+            style="border-top: 2px solid #ff4444; border-bottom: 2px solid #ff4444;">
+            <div class="container" style="text-align: center;">
+                <div class="reveal">
+                    <i class="fas fa-exclamation-triangle pulse"
+                        style="color: #ff4444; font-size: 3rem; margin-bottom: 1.5rem;"></i>
+                    <h2 class="section-title">EMERGENCY <span>EXTRACTION</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.2rem;">IMMEDIATE ROADSIDE
+                        RESPONSE DEPLOYED IN UNDER 30 MINUTES.</p>
+                    <div class="emergency-box" style="margin: 0 auto; display: inline-flex;">
+                        <i class="fas fa-phone-alt"></i>
+                        <span class="phone-number" style="font-size: 2.5rem; letter-spacing: 2px;">1-800-RESCUE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Sector Nodes (Locations) -->
+        <section id="sector-nodes" class="v-section">
+            <div class="container">
+                <h2 class="section-title">SECTOR <span>NODES</span></h2>
+                <div class="grid-3">
+                    <div class="data-card reveal">
+                        <h4>NORTH SECTOR</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 1rem 0;">Industrial Zone B, Node
+                            04</p>
+                        <span style="color: var(--primary); font-size: 0.9rem;">+1-555-NODE-01</span>
+                    </div>
+                    <div class="data-card reveal delay-1">
+                        <h4>SOUTH SECTOR</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 1rem 0;">Harbor District, Gate 12
+                        </p>
+                        <span style="color: var(--primary); font-size: 0.9rem;">+1-555-NODE-02</span>
+                    </div>
+                    <div class="data-card reveal delay-2">
+                        <h4>EAST SECTOR</h4>
+                        <p style="font-size: 0.8rem; color: var(--text-muted); margin: 1rem 0;">Tech Valley, Suite 808
+                        </p>
+                        <span style="color: var(--primary); font-size: 0.9rem;">+1-555-NODE-03</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Social Sync (Social Grid) -->
+        <section id="digital-footprint" class="v-section" style="background: var(--bg-card);">
+            <div class="container" style="text-align: center;">
+                <h2 class="section-title">SOCIAL <span>SYNC</span></h2>
+                <div style="display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;" class="reveal">
+                    <a href="#" style="color: #fff; font-size: 2.5rem; transition: var(--transition);"
+                        class="hover-primary"><i class="fab fa-instagram"></i></a>
+                    <a href="#" style="color: #fff; font-size: 2.5rem; transition: var(--transition);"
+                        class="hover-primary"><i class="fab fa-facebook"></i></a>
+                    <a href="#" style="color: #fff; font-size: 2.5rem; transition: var(--transition);"
+                        class="hover-primary"><i class="fab fa-twitter"></i></a>
+                    <a href="#" style="color: #fff; font-size: 2.5rem; transition: var(--transition);"
+                        class="hover-primary"><i class="fab fa-youtube"></i></a>
+                    <a href="#" style="color: #fff; font-size: 2.5rem; transition: var(--transition);"
+                        class="hover-primary"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Mechanic Intake (Careers) -->
+        <section id="mechanic-intake" class="v-section">
+            <div class="container">
+                <div class="split-layout reveal" style="align-items: center;">
+                    <div class="service-content">
+                        <h2 class="section-title" style="text-align: left;">MASTER <span>INTAKE</span></h2>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">ARE YOU A MASTER-TIER TECHNICIAN? WE
+                            ARE RECRUITING TOP AGENTS FOR ELITE MISSIONS.</p>
+                        <ul style="list-style: none; color: #fff; margin-bottom: 2.5rem;">
+                            <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                                    style="color: var(--primary); margin-right: 0.5rem;"></i> L3 MASTER CERTIFICATION
+                                REQUIRED</li>
+                            <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                                    style="color: var(--primary); margin-right: 0.5rem;"></i> PRECISION TOOL PROFICIENCY
+                            </li>
+                            <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
+                                    style="color: var(--primary); margin-right: 0.5rem;"></i> COMPETITIVE CREDITS & GEAR
+                            </li>
+                        </ul>
+                        <a href="#" class="btn btn-outline">SUBMIT DOSSIER</a>
+                    </div>
+                    <div class="service-media">
+                        <img src="c5.jpg" alt="Mechanic Career"
+                            style="border: 1px solid var(--primary); box-shadow: var(--glow);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: Intel Hub (FAQ) -->
+        <section id="support-intel" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+            <div class="container">
+                <div class="split-layout reveal" style="align-items: flex-start;">
+                    <div class="service-content">
+                        <h2 class="section-title" style="text-align: left;">INTEL <span>HUB</span></h2>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <div class="faq-question">ESTIMATED RESPONSE LATENCY? <i class="fas fa-plus"></i></div>
+                                <div class="faq-answer">
+                                    <p>Uplinks are typically processed within 2 standard operational hours.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">SECURE ENCRYPTED COMMUNICATIONS? <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>All transmissions are AES-256 encrypted through our tactical firewalls.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <div class="faq-question">ONSITE VISITS WITHOUT UPLINK? <i class="fas fa-plus"></i>
+                                </div>
+                                <div class="faq-answer">
+                                    <p>Walk-ins are allowed, but priority is given to pre-established missions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-media" style="margin-top: 4rem;">
+                        <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800"
+                            alt="Intel Hub Briefing" style="border: 1px solid var(--primary); box-shadow: var(--glow);">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="mega-footer">
+        <div class="container footer-grid">
+            <div class="footer-col reveal">
+                <div class="logo">
+                    <a href="#">AUTO<span>CORE</span></a>
+                </div>
+                <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
+            </div>
+            <div class="footer-col reveal delay-1">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="index.html">Home 1</a></li>
+                    <li><a href="index2.html">Home 2</a></li>
+                </ul>
+            </div>
+            <div class="footer-col reveal delay-2">
+                <h4>Contact Us</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Precision Dr, Engine City</li>
+                    <li><i class="fas fa-phone-alt"></i> +1 800-AUTODOC</li>
+                    <li><i class="fas fa-envelope"></i> missions@autocore.com</li>
+                </ul>
+            </div>
+            <div class="footer-col reveal delay-3">
+                <h4>Stay Synced</h4>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Email for updates">
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AUTOCORE Precision Center. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

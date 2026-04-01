@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTER | AUTOCORE Tactical</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="auth-page">
+    <div class="auth-bg"></div>
+
+    <div class="auth-card reveal">
+        <div class="auth-header-tools">
+            <button id="rtl-toggle" class="globe-toggle" title="Toggle LTR/RTL">
+                <i class="fas fa-globe"></i>
+            </button>
+        </div>
+        <div class="auth-brand">
+            <div class="logo">
+                <a href="index.html" style="text-decoration: none; color: inherit;">AUTO<span>CORE</span></a>
+            </div>
+            <p>New Command Uplink</p>
+        </div>
+
+        <form class="auth-form" action="dashboard.html">
+            <div class="form-group">
+                <label>Full Name</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Commander Name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="commander@autocore.tactical" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-phone"></i>
+                    <input type="tel" placeholder="+1 (555) 000-0000" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Access Code</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Create secret code" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Access Code</label>
+                <div class="input-wrapper">
+                    <i class="fas fa-shield-alt"></i>
+                    <input type="password" placeholder="Verify secret code" required>
+                </div>
+            </div>
+
+            <label class="legal-check">
+                <input type="checkbox" required>
+                <span>I authorize tactical data processing and agree to the <a href="#">Terms of Command</a> and <a
+                        href="#">Privacy Protocol</a>.</span>
+            </label>
+
+            <button type="submit" class="auth-submit">Create Uplink</button>
+        </form>
+
+        <div class="auth-footer">
+            Already have an active session? <a href="login.html">Login here</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOCORE | Elite Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+
+<body class="home-2">
+    <header id="main-header">
+        <nav class="container">
+            <div class="logo">
+                <a href="index.html">AUTO<span>CORE</span></a>
+            </div>
+
+            <ul class="nav-links">
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Home <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="index.html">Home 1</a>
+                        <a href="index2.html">Home 2</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Dashboard <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="dashboard.html">User Dashboard</a>
+                        <a href="admin_dashboard.html">Admin Dashboard</a>
+                    </div>
+                </li>
+                <li class="mobile-only"><a href="login.html" class="nav-login">Login</a></li>
+            </ul>
+
+            <div class="header-actions">
+                <a href="login.html" class="login-btn desktop-only">Login</a>
+                <button id="rtl-toggle" title="Toggle LTR/RTL">
+                    <i class="fas fa-globe"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Section 1: Elite Performance Tuning (Hero) -->
+        <section id="services-hero" class="v-section"
+            style="background: linear-gradient(135deg, rgba(10, 12, 14, 0.9) 0%, rgba(10, 12, 14, 0.4) 100%), url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat; padding-top: 180px; padding-bottom: 120px; text-align: center;">
+            <div class="container hero-content reveal">
+                <div class="status-badge" style="margin: 0 auto 1.5rem;"><span class="pulse"></span> CAPABILITIES
+                    UNLOCKED</div>
+                <h1 style="text-shadow: 0 0 20px rgba(0, 212, 255, 0.3); font-size: 4rem;">ELITE
+                    <span>PERFORMANCE</span>
+                </h1>
+                <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem;">Comprehensive engineering solutions
+                    for the uncompromising driver. Every service is a bespoke operation to maximize kinetic output.</p>
+                <a href="#ecu-calibration" class="btn btn-primary"
+                    style="font-size: 1.1rem; padding: 1rem 3rem;">EXPLORE DIRECTIVES</a>
+            </div>
+        </section>
+
+        <!-- Section 2: ECU Calibration (Split Layout) -->
+        <section id="ecu-calibration" class="v-section">
+            <div class="container">
+                <div class="split-layout" style="align-items: center;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--accent); color: #000;"><i
+                                class="fas fa-microchip"></i>
+                            STAGE 1-3</div>
+                        <h2 class="section-title">ECU <span>CALIBRATION</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Ignition timing,
+                            fuel delivery, and boost mapping completely rewritten for optimal power delivery and
+                            throttle response.</p>
+                        <div class="stage-grid">
+                            <div class="stage-card s1">
+                                <h4>STAGE 1</h4>
+                                <small>Software Only</small>
+                            </div>
+                            <div class="stage-card s2">
+                                <h4>STAGE 2</h4>
+                                <small>Bolt-On Required</small>
+                            </div>
+                            <div class="stage-card s3">
+                                <h4>STAGE 3</h4>
+                                <small>Turbo/Super Swap</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
+                        <img src="ecu.jpg" alt="Engine Bay" style="object-fit: cover; filter: contrast(1.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: TCU & Transmission (Split Layout Reverse) -->
+        <section id="tcu-tuning" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+            <div class="container">
+                <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--primary);"><i class="fas fa-cogs"></i>
+                            DRIVETRAIN</div>
+                        <h2 class="section-title">TCU <span>OPTIMIZATION</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Eliminate shift lag
+                            and raise torque limits. Our Transmission Control Unit mapping ensures power hits the
+                            pavement instantly.</p>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #fff;">
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-caret-right" style="color: var(--primary); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Adjusted Shift Points & Firmness</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-caret-right" style="color: var(--primary); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Increased Clutch Clamping Force</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-caret-right" style="color: var(--primary); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Advanced Launch Control Metrics</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(255, 94, 0, 0.1);">
+                        <img src="c9.jpg" alt="Track Launch" style="object-fit: cover; filter: contrast(1.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Custom Dyno Diagnostics (Full Width Banner) -->
+        <section id="dyno" class="v-section"
+            style="background: linear-gradient(135deg, rgba(10, 12, 14, 0.95), rgba(0, 12, 20, 0.8)), url('https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&q=80&w=2000') center/cover fixed; text-align: center; border-top: 1px solid var(--accent); border-bottom: 1px solid var(--accent); padding: 8rem 0;">
+            <div class="container">
+                <div class="reveal">
+                    <h2 class="section-title" style="margin-bottom: 1rem;">CUSTOM <span>DYNO DIAGNOSTICS</span></h2>
+                    <p
+                        style="font-size: 1.2rem; color: #fff; max-width: 800px; margin: 0 auto 3rem; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">
+                        All-Wheel Drive chassis dynamometer testing capable of measuring up to 2,500 continuous
+                        horsepower. We validate every parameter under physical load.</p>
+                    <div
+                        style="display: inline-flex; gap: 2rem; background: rgba(0,0,0,0.6); padding: 1.5rem 3rem; border-radius: 50px; border: 1px solid var(--glass-border);">
+                        <div>
+                            <span
+                                style="display: block; font-family: var(--font-heading); font-size: 2rem; color: var(--accent);">2,500</span>
+                            <small style="color: var(--text-muted); letter-spacing: 1px;">MAX HP LOAD</small>
+                        </div>
+                        <div style="width: 1px; background: rgba(255,255,255,0.2);"></div>
+                        <div>
+                            <span
+                                style="display: block; font-family: var(--font-heading); font-size: 2rem; color: #00ff88;">AWD</span>
+                            <small style="color: var(--text-muted); letter-spacing: 1px;">LINKED DRUM</small>
+                        </div>
+                        <div style="width: 1px; background: rgba(255,255,255,0.2);"></div>
+                        <div>
+                            <span
+                                style="display: block; font-family: var(--font-heading); font-size: 2rem; color: var(--primary);">200+</span>
+                            <small style="color: var(--text-muted); letter-spacing: 1px;">DATA CHANNELS</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Bespoke Exhaust Systems (Split Layout) -->
+        <section id="exhaust" class="v-section">
+            <div class="container">
+                <div class="split-layout" style="align-items: center;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--accent); color: #000;"><i
+                                class="fas fa-fire-alt"></i>
+                            FABRICATION</div>
+                        <h2 class="section-title">BESPOKE <span>EXHAUST SYSTEMS</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Titanium and
+                            inconel systems hand-welded to your specifications. We engineer exhaust flow to eliminate
+                            backpressure and shape your vehicle's acoustic signature.</p>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #fff;">
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-volume-up" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Valvetronic Acoustic Control</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-weight-hanging" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Up to 40% Weight Reduction</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-wind" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Optimized Scavenging Effect</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
+                        <img src="c7.jpg" alt="Supercar Exhaust" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6: Forced Induction Upgrades (Split Reverse) -->
+        <section id="forced-induction" class="v-section" style="background: rgba(255, 94, 0, 0.02);">
+            <div class="container">
+                <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--primary);"><i class="fas fa-fan"></i> BOOST
+                            ARCHITECTURE</div>
+                        <h2 class="section-title">FORCED <span>INDUCTION</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Massive volumetric
+                            efficiency gains. We design, plumb, and map custom twin-turbo and supercharger
+                            configurations for extreme power goals.</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div
+                                style="background: var(--bg-card); padding: 1.5rem; border: 1px solid var(--glass-border); border-left: 3px solid var(--primary); border-radius: 8px;">
+                                <h4 style="color: #fff; font-family: var(--font-heading);">TWIN HYBRID</h4>
+                                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Quick spool
+                                    upgrades.</p>
+                            </div>
+                            <div
+                                style="background: var(--bg-card); padding: 1.5rem; border: 1px solid var(--glass-border); border-left: 3px solid #00ff88; border-radius: 8px;">
+                                <h4 style="color: #fff; font-family: var(--font-heading);">BIG SINGLE</h4>
+                                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Top-end absolute
+                                    power.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(255, 94, 0, 0.1);">
+                        <img src="c8.jpg" alt="Engine Turbocharger" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7: Engine Building (Grid Layout) -->
+        <section id="engine-building" class="v-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">INTERNALS <span>FORGED</span></h2>
+                    <p>Building bulletproof engines capable of handling quadruple-digit figures.</p>
+                </div>
+
+                <div class="split-layout" style="margin-top: 3rem; align-items: start;">
+                    <div class="service-media reveal"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="c10.jpeg" alt="Forged Internals" style="height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="data-nodes-grid reveal delay-1"
+                        style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="node-card"
+                            style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px;">
+                            <i class="fas fa-layer-group"
+                                style="font-size: 2rem; color: #00ff88; margin-bottom: 1rem;"></i>
+                            <h4 style="color: #fff; font-family: var(--font-heading);">SLEEVING</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">Darton sleeve installation for
+                                extreme cylinder strength.</p>
+                        </div>
+                        <div class="node-card"
+                            style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px;">
+                            <i class="fas fa-cut"
+                                style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                            <h4 style="color: #fff; font-family: var(--font-heading);">CNC PORTING</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">5-axis machined cylinder heads for
+                                massive airflow.</p>
+                        </div>
+                        <div class="node-card"
+                            style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px; grid-column: span 2;">
+                            <i class="fas fa-balance-scale"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                            <h4 style="color: #fff; font-family: var(--font-heading);">DYNAMIC BALANCING</h4>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">Rotating assemblies balanced to
+                                within 0.1 grams for 10,000+ RPM reliability.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 8: Aerodynamics (Full Width Image Left) -->
+        <section id="aerodynamics" class="v-section" style="background: rgba(0, 212, 255, 0.02); overflow: hidden;">
+            <div class="container">
+                <div class="split-layout" style="align-items: center;">
+                    <div class="service-media reveal"
+                        style="flex: 1.5; border-radius: 12px; overflow: hidden; position: relative;">
+                        <img src="c11.jpg" alt="Aerodynamic Carbon Wing"
+                            style="object-fit: cover; filter: contrast(1.1);">
+                        <div class="hud-scanner"></div>
+                    </div>
+                    <div class="service-content reveal delay-1" style="flex: 1; padding-left: 2rem;">
+                        <div class="status-badge" style="background: #00ff88; color: #000;"><i class="fas fa-wind"></i>
+                            DOWNFORCE</div>
+                        <h2 class="section-title">AERODYNAMIC <span>PROFILING</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Wind-tunnel tested
+                            carbon fiber composites designed to slice air and aggressively stick your vehicle to the
+                            tarmac at high velocity.</p>
+                        <a href="#contact" class="btn btn-outline">Request Aero Consult</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 9: Track-Focused Suspension (Split Layout Reverse) -->
+        <section id="suspension" class="v-section">
+            <div class="container">
+                <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--accent); color: #000;"><i
+                                class="fas fa-compress-arrows-alt"></i> KINEMATICS</div>
+                        <h2 class="section-title">TRACK-FOCUSED <span>SUSPENSION</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Perfecting
+                            geometry. We utilize corner-balancing and multi-way adjustable coilovers to deliver
+                            razor-sharp turn-in and mid-corner stability.</p>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #fff;">
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Advanced Corner Balancing</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Custom Spring Rates</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-check-circle" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Bushing Deflection Eradication</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
+                        <img src="track.jpg" alt="Track Suspension" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 10: High-Performance Braking Systems (Split Layout) -->
+        <section id="braking" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+            <div class="container">
+                <div class="split-layout" style="align-items: center;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: #00ff88; color: #000;"><i
+                                class="fas fa-stop-circle"></i> DECELERATION</div>
+                        <h2 class="section-title">HIGH-PERFORMANCE <span>BRAKING</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Going fast requires
+                            stopping faster. We install and tune carbon-ceramic big brake kits capable of withstanding
+                            extreme thermal loads without fade.</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <span
+                                style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 0.5rem 1rem; border-radius: 4px; color: var(--accent);"><i
+                                    class="fas fa-temperature-low"></i> Thermal Management</span>
+                            <span
+                                style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 0.5rem 1rem; border-radius: 4px; color: var(--accent);"><i
+                                    class="fas fa-tint"></i> Racing Fluid Swaps</span>
+                            <span
+                                style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 0.5rem 1rem; border-radius: 4px; color: var(--accent);"><i
+                                    class="fas fa-cog"></i> Master Cylinder Upgrades</span>
+                        </div>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1);">
+                        <img src="brake.jpg" alt="Ceramic Brakes" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 11: Telemetry & Data Analysis (Dark Tech Layout) -->
+        <section id="telemetry" class="v-section"
+            style="background: linear-gradient(to bottom, transparent, rgba(10, 12, 14, 0.95)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000') center/cover fixed;">
+            <div class="container text-center">
+                <div class="section-header reveal text-center"
+                    style="background: rgba(10, 12, 14, 0.8); padding: 4rem; border-radius: 12px; border: 1px solid var(--accent); display: inline-block;">
+                    <div class="status-badge" style="margin: 0 auto 1rem;"><i class="fas fa-satellite-dish"></i> DATA
+                        LINK ACTIVE</div>
+                    <h2 class="section-title">TELEMETRY & <span>DATA ANALYSIS</span></h2>
+                    <p style="font-size: 1.1rem; max-width: 600px; margin: 0 auto 2rem;">Post-session breakdowns. We
+                        analyze driver inputs, steering angles, and engine vitals to find tenths of a second hidden in
+                        the data.</p>
+                    <div class="scan-result-grid"
+                        style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: left;">
+                        <div
+                            style="background: rgba(0, 0, 0, 0.6); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 8px;">
+                            <small style="color: var(--accent);">LATERAL G-FORCE</small>
+                            <div style="font-size: 1.8rem; font-family: var(--font-heading); color: #fff;">1.4<span
+                                    style="font-size: 1rem; color: var(--text-muted);">G</span></div>
+                        </div>
+                        <div
+                            style="background: rgba(0, 0, 0, 0.6); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 8px;">
+                            <small style="color: var(--primary);">THROTTLE TRACE</small>
+                            <div style="font-size: 1.8rem; font-family: var(--font-heading); color: #fff;">98<span
+                                    style="font-size: 1rem; color: var(--text-muted);">% AVG</span></div>
+                        </div>
+                        <div
+                            style="background: rgba(0, 0, 0, 0.6); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 8px;">
+                            <small style="color: #00ff88;">BRAKE PRESSURE</small>
+                            <div style="font-size: 1.8rem; font-family: var(--font-heading); color: #fff;">BAR <span
+                                    style="font-size: 1rem; color: var(--text-muted);">NOMINAL</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 12: Race Day Prep & Support (Split Layout Reverse) -->
+        <section id="race-prep" class="v-section">
+
+            <div class="container">
+                <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--primary);"><i
+                                class="fas fa-flag-checkered"></i> TRACKSIDE</div>
+                        <h2 class="section-title">RACE DAY <span>SUPPORT</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Full pit-lane
+                            logistics. From tire warmers to live telemetry monitoring, our engineers ensure your vehicle
+                            performs flawlessly under competitive conditions.</p>
+                        <a href="#contact" class="btn btn-primary" style="margin-right: 1rem;">Reserve Pit Crew</a>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(255, 94, 0, 0.1);">
+                        <img src="race.webp" alt="Race Pit Crew" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 13: Structural Reinforcement (Split Layout) -->
+        <section id="structural" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+
+            <div class="container">
+                <div class="split-layout" style="align-items: center;">
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--accent); color: #000;"><i
+                                class="fas fa-cubes"></i>
+                            RIGIDITY</div>
+                        <h2 class="section-title">STRUCTURAL <span>REINFORCEMENT</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">FIA-certified roll
+                            cages, strut braces, and seam welding. We stiffen the chassis to precisely communicate
+                            suspension loads directly to the driver.</p>
+                        <ul
+                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #fff;">
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-shield-alt" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Chromoly Steel Tube Fabrication</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-shield-alt" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Advanced Laser Measurement</span>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px;">
+                                <i class="fas fa-shield-alt" style="color: var(--accent); font-size: 1.2rem;"></i>
+                                <span style="font-size: 1.1rem;">Custom Gusseting</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=1200"
+                            alt="Chassis Works" style="object-fit: cover; filter: grayscale(0.5);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 14: Bespoke Wheels & Tires (Bento style grid) -->
+        <section id="wheels" class="v-section">
+            <div class="container">
+                <div class="section-header text-center reveal">
+                    <h2 class="section-title">WHEELS & <span>CONTACT PATCH</span></h2>
+                    <p>Reducing unsprung mass. Maximizing mechanical grip.</p>
+                </div>
+
+                <div class="bento-grid"
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem;">
+                    <div class="bento-item large reveal"
+                        style="grid-column: span 2; position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="c3.jpg" alt="Forged Wheels"
+                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+                        <div
+                            style="position: absolute; bottom: 0; left: 0; padding: 2rem; width: 100%; background: linear-gradient(transparent, rgba(10, 12, 14, 0.9));">
+                            <h3 style="color: var(--accent); font-family: var(--font-heading);">FORGED ALLOY SOURCING
+                            </h3>
+                            <p style="color: #fff;">Custom offsets engineered specifically for brake clearance and
+                                optimal fender flush fitment.</p>
+                        </div>
+                    </div>
+                    <div class="bento-item reveal delay-1"
+                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: center;">
+                        <i class="fas fa-dharmachakra"
+                            style="font-size: 3rem; color: #00ff88; margin-bottom: 1rem;"></i>
+                        <h4 style="color: #fff; font-family: var(--font-heading);">R-COMPOUND TIRES</h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem;">Sourcing the exact rubber compound
+                            needed for your specific track temperatures and surface abrasive qualities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 15: Initialize Upgrade (CTA) -->
+        <section id="services-cta" class="v-section"
+            style="background: linear-gradient(135deg, rgba(0, 12, 20, 0.95), rgba(10, 12, 14, 0.9)), url('https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&q=80&w=2000') center/cover fixed; text-align: center; border-top: 1px solid var(--primary); padding: 6rem 0;">
+            <div class="container">
+                <div class="reveal">
+                    <h2 class="section-title" style="margin-bottom: 2rem;">INITIALIZE <span>UPGRADE PROTOCOL</span></h2>
+                    <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 3rem; color: var(--text-muted);">Your
+                        machine's true potential remains locked. Connect with our engineering core to begin the
+                        transformation process.</p>
+                    <a href="contact.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1.2rem 3rem;"><i
+                            class="fas fa-satellite-dish" style="margin-right: 10px;"></i> ESTABLISH CONNECTION</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 20: Mega Footer -->
+        <footer id="mega-footer">
+            <div class="container footer-grid">
+                <div class="footer-col reveal">
+                    <div class="logo">
+                        <a href="index.html">AUTO<span>CORE</span></a>
+                    </div>
+                    <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
+                </div>
+                <div class="footer-col reveal delay-1">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="index2.html">Home 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col reveal delay-2">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Precision Dr, Engine City</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 800-AUTODOC</li>
+                        <li><i class="fas fa-envelope"></i> missions@autocore.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col reveal delay-3">
+                    <h4>Stay Synced</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email for updates">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AUTOCORE Precision Center. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

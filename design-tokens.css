@@ -1,5 +1,5 @@
 :root {
-    /* Rugged Color Palette */
+    /* Rugged Color Palette (Dark Default) */
     --bg-dark: #0f1113;
     --bg-card: #1a1d20;
     --primary: #ff5e00; /* Safety Orange */
@@ -18,6 +18,16 @@
     /* Effects */
     --glow: 0 0 15px rgba(255, 94, 0, 0.4);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-mode {
+    --bg-dark: #f8fafc;
+    --bg-card: #ffffff;
+    --text-main: #0f1113;
+    --text-muted: #64748b;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(0, 0, 0, 0.1);
+    --secondary: #f1f5f9;
 }
 
 [dir="rtl"] {

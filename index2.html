@@ -19,7 +19,7 @@
     <header id="main-header">
         <nav class="container">
             <div class="logo">
-                <a href="index.html">AUTO<span>CORE</span></a>
+                <a href="index.html"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
             </div>
 
             <ul class="nav-links">
@@ -45,6 +45,9 @@
 
             <div class="header-actions">
                 <a href="login.html" class="login-btn desktop-only">Login</a>
+                <button id="theme-toggle" title="Toggle Light/Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <button id="rtl-toggle" title="Toggle LTR/RTL">
                     <i class="fas fa-globe"></i>
                 </button>
@@ -60,7 +63,7 @@
     <main>
         <!-- Section 1: Vortex Hero (HUD Style) -->
         <section id="vortex-hero" class="v-section"
-            style="background: linear-gradient(rgba(10,12,14,0.75), rgba(10,12,14,0.92)), url('hero.jpg') center/cover no-repeat;">
+            style="background: linear-gradient(rgba(10,12,14,0.75), rgba(10,12,14,0.92)), url('ser8.jpg') center/cover no-repeat;">
             <div class="hero-vortex-bg" style="background:none;"></div>
             <div class="blueprint-bg"></div>
             <div class="hud-overlay">
@@ -392,81 +395,7 @@
             </div>
         </section>
 
-        <!-- Section 11: Console Diagnostics (Terminal) -->
-        <section id="console" class="v-section" style="background: #050607;">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">TERMINAL <span>DIAGNOSTICS</span></h2>
-                    <p>Sub-level system initialization logs</p>
-                </div>
-                <div class="terminal-box reveal delay-1">
-                    <div class="terminal-header">
-                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                        <span class="title">sys_diagnostic.exec</span>
-                    </div>
-                    <div class="terminal-body">
-                        <p>> Initializing Core Engine Link... [OK]</p>
-                        <p>> Checking Thermal Integrity... [98%]</p>
-                        <p>> Linking AI Neural Tuner... [CONNECTED]</p>
-                        <p>> Optimization Mission: Ready.</p>
-                        <p class="blink">_</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 12: Rescue Beacon (Pulse) -->
-        <section id="rescue" class="v-section">
-            <div class="container text-center">
-                <div class="reveal">
-                    <h2 class="section-title">RESCUE <span>BEACON</span></h2>
-                    <p>Instant deployment for emergency extractions</p>
-                </div>
-                <div class="beacon-dashboard reveal delay-1">
-                    <!-- Telemetry Panel 1 -->
-                    <div class="beacon-panel">
-                        <h4><i class="fas fa-location-arrow"></i> GEO_LOCK_PRIMARY</h4>
-                        <div class="coord-display">
-                            <div>LAT: <span>34.0522° N</span></div>
-                            <div>LONG: <span>118.2437° W</span></div>
-                            <div>ALT: <span>242m_MSL</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Central Visualizer -->
-                    <div class="beacon-visualizer">
-                        <button class="pulse-btn">
-                            <i class="fas fa-satellite-dish"></i>
-                        </button>
-                    </div>
-
-                    <!-- Telemetry Panel 2 -->
-                    <div class="beacon-panel">
-                        <h4><i class="fas fa-wifi"></i> SIGNAL_INTENSITY</h4>
-                        <div class="signal-meter">
-                            <div class="signal-bars">
-                                <div class="bar active" style="height: 40%;"></div>
-                                <div class="bar active" style="height: 60%;"></div>
-                                <div class="bar active" style="height: 85%;"></div>
-                                <div class="bar active" style="height: 70%;"></div>
-                                <div class="bar" style="height: 95%;"></div>
-                            </div>
-                        </div>
-                        <div style="margin-top: 1.5rem;">
-                            <small
-                                style="color: var(--accent); font-family: var(--font-heading); font-size: 0.7rem; display: flex; align-items: center; gap: 0.5rem;">
-                                <i class="fas fa-lock"></i> ENCRYPTION_AES_256
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <div class="reveal delay-2" style="margin-top: 2rem;">
-                    <span class="status"
-                        style="font-family: var(--font-heading); color: var(--primary); font-size: 0.8rem; letter-spacing: 2px;">BROADCAST_ACTIVE
-                        | WAITING_FOR_EXTRACTION</span>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 13: Modernist Gallery (High-Density) -->
         <section id="modern-gallery" class="v-section">
@@ -476,14 +405,10 @@
                     <p>Inside the innovation workshop</p>
                 </div>
                 <div class="dense-mosaic-grid">
-                    <div class="mosaic-cell tall reveal"><img
-                            src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80"
-                            alt="Tech 1"></div>
-                    <div class="mosaic-cell reveal delay-1"><img
-                            src="https://images.unsplash.com/photo-1542282088-fe8426682b8f?auto=format&fit=crop&w=800&q=80"
-                            alt="Tech 2"></div>
-                    <div class="mosaic-cell reveal delay-2"><img src="c3.jpg" alt="Tech 3"></div>
-                    <div class="mosaic-cell wide reveal delay-3"><img src="c4.jpg" alt="Tech 4"></div>
+                    <div class="mosaic-cell tall reveal"><img src="ser11.jpg" alt="Tech 1"></div>
+                    <div class="mosaic-cell reveal delay-1"><img src="ser4.jpg" alt="Tech 2"></div>
+                    <div class="mosaic-cell reveal delay-2"><img src="ser5.jpg" alt="Tech 3"></div>
+                    <div class="mosaic-cell wide reveal delay-3"><img src="ser9.jpg" alt="Tech 4"></div>
                 </div>
             </div>
         </section>
@@ -515,40 +440,6 @@
             </div>
         </section>
 
-        <!-- Section 15: Watt/Volt (EV Focus) -->
-        <section id="ev-focus" class="v-section"
-            style="background: radial-gradient(circle at top left, #0a2e3a 0%, #050607 100%);">
-            <div class="container">
-                <div class="split-layout" style="align-items: center;">
-                    <div class="hero-content reveal">
-                        <div class="status-badge"
-                            style="background: rgba(0, 255, 128, 0.1); color: #00ff80; border-color: rgba(0, 255, 128, 0.2); display: inline-block; margin-bottom: 1.5rem;">
-                            <span class="pulse"
-                                style="background: #00ff80; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px;"></span>
-                            EV_HYBRID READY
-                        </div>
-                        <h2 class="section-title">HIGH <span>VOLTAGE</span></h2>
-                        <p>Dedicated service infrastructure for the electric revolution. Battery health diagnostics,
-                            motor
-                            rewinding, and regenerative braking calibration.</p>
-                        <div class="ev-stats-grid">
-                            <div class="ev-stat">
-                                <span class="label">Battery Health</span>
-                                <span class="val">99.2%</span>
-                            </div>
-                            <div class="ev-stat">
-                                <span class="label">Charge Efficiency</span>
-                                <span class="val">95%</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-media reveal delay-1"
-                        style="flex: 1; border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 255, 128, 0.1);">
-                        <img src="ev.jpeg" alt="EV Motor Data" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 16: Elite Access (Security Gate) -->
         <section id="elite-access" class="v-section">
@@ -626,53 +517,13 @@
             </div>
         </section>
 
-        <!-- Section 19: Data-Heavy Booking (Sliders) -->
-        <section id="data-booking" class="v-section">
-            <div class="container">
-                <div class="booking-data-container reveal"
-                    style="background: var(--bg-card); border: 1px solid var(--glass-border); display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
-                    <div class="booking-form-p" style="padding: 4rem; border-right: 1px solid var(--glass-border);">
-                        <h2 class="section-title">INITIALIZE <span>MISSION</span></h2>
-                        <form style="margin-top: 2rem;">
-                            <div class="input-group" style="margin-bottom: 2rem;">
-                                <label
-                                    style="display: block; font-family: var(--font-heading); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 1rem;">URGENCY_PARAMETER</label>
-                                <input type="range" style="width: 100%; accent-color: var(--accent);">
-                            </div>
-                            <div class="input-group" style="margin-bottom: 2rem;">
-                                <label
-                                    style="display: block; font-family: var(--font-heading); font-size: 0.7rem; color: var(--text-muted); margin-bottom: 1rem;">MISSION_START_DATE</label>
-                                <input type="date"
-                                    style="width: 100%; background: transparent; border: 1px solid var(--glass-border); color: #fff; padding: 1rem;">
-                            </div>
-                            <button class="btn btn-primary w-100">LAUNCH SYSTEM</button>
-                        </form>
-                    </div>
-                    <div class="booking-stats-p"
-                        style="padding: 4rem; background: rgba(0, 212, 255, 0.02); display: flex; flex-direction: column; justify-content: center; gap: 3rem;">
-                        <div class="m-stat">
-                            <small
-                                style="color: var(--text-muted); font-family: var(--font-heading);">AVG_INITIALIZATION</small>
-                            <div style="font-size: 2.5rem; font-family: var(--font-heading); color: var(--accent);">4.2
-                                MIN</div>
-                        </div>
-                        <div class="m-stat">
-                            <small
-                                style="color: var(--text-muted); font-family: var(--font-heading);">MISSION_SUCCESS</small>
-                            <div style="font-size: 2.5rem; font-family: var(--font-heading); color: var(--accent);">
-                                99.9%</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 20: Mega Footer -->
         <footer id="mega-footer">
             <div class="container footer-grid">
                 <div class="footer-col reveal">
                     <div class="logo">
-                        <a href="#">AUTO<span>CORE</span></a>
+                        <a href="index.html"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
                     </div>
                     <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
                 </div>

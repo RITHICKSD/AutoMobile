@@ -49,14 +49,28 @@ nav.container {
 
 .logo a {
     font-size: 1.8rem;
-    color: #fff;
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 900;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo a i {
+    color: var(--primary);
+    font-size: 1.6rem;
+    background: rgba(255, 102, 0, 0.1);
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 102, 0, 0.2);
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.15);
 }
 
 .logo span {
     color: var(--primary);
+    position: relative;
 }
 
 .header-actions {
@@ -65,17 +79,31 @@ nav.container {
     gap: 1.5rem;
 }
 
-#rtl-toggle {
+#rtl-toggle,
+.globe-toggle {
     background: none;
     border: none;
-    color: #fff;
-    font-size: 1.2rem;
+    color: var(--text-main);
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
-#rtl-toggle:hover {
+#rtl-toggle:hover,
+.globe-toggle:hover {
     color: var(--primary);
+    background: rgba(255, 215, 0, 0.1);
+    transform: rotate(15deg);
+}
+
+#rtl-toggle i,
+.globe-toggle i {
+    font-size: 1.2rem;
 }
 
 .hamburger {
@@ -91,7 +119,7 @@ nav.container {
     display: block;
     width: 100%;
     height: 3px;
-    background: #fff;
+    background: var(--text-main);
     transition: var(--transition);
     border-radius: 2px;
 }
@@ -107,7 +135,7 @@ nav.container {
 }
 
 .nav-links a {
-    color: #fff;
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 700;
     font-size: 0.85rem;
@@ -122,6 +150,24 @@ nav.container {
 
 .nav-links a:hover {
     color: var(--primary);
+}
+
+.nav-links a.active,
+.nav-links .dropbtn.active {
+    color: var(--primary);
+    position: relative;
+}
+
+.nav-links a.active::after,
+.nav-links .dropbtn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--primary);
+    box-shadow: 0 0 8px var(--primary);
 }
 
 /* Visibility Utilities */
@@ -179,6 +225,7 @@ nav.container {
     font-family: var(--font-heading);
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;
 }
 
 /* Header Actions */
@@ -188,18 +235,121 @@ nav.container {
     gap: 1.5rem;
 }
 
-#rtl-toggle {
+#rtl-toggle,
+#theme-toggle {
     background: none;
     border: none;
-    color: #fff;
+    color: var(--text-main);
     font-size: 1.2rem;
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#rtl-toggle:hover {
+#rtl-toggle:hover,
+#theme-toggle:hover {
     color: var(--primary);
     transform: rotate(15deg);
+}
+
+
+/* Force Dark Mode on Header, Footer, and Hero Sections */
+body.light-mode #main-header,
+body.light-mode #mega-footer,
+body.light-mode #hero,
+body.light-mode #vortex-hero,
+body.light-mode #about-hero,
+body.light-mode #services-hero,
+body.light-mode #contact-hero,
+body.light-mode .hero-section {
+    --bg-dark: #0f1113;
+    --bg-card: #1a1d20;
+    --text-main: #e0e0e0;
+    --text-muted: #8e959c;
+    --glass-bg: rgba(26, 29, 32, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --secondary: #2c3136;
+    /* Removed background-color !important to let original backgrounds/gradients show */
+}
+
+/* Ensure all hero text remains white in Light Mode */
+body.light-mode #hero h1,
+body.light-mode #vortex-hero h1,
+body.light-mode #about-hero h1,
+body.light-mode #services-hero h1,
+body.light-mode #contact-hero h1,
+body.light-mode #hero p,
+body.light-mode #vortex-hero p,
+body.light-mode #about-hero p,
+body.light-mode #services-hero p,
+body.light-mode #contact-hero p,
+body.light-mode #hero span:not(.plus):not(.val):not(.number):not(.status-badge),
+body.light-mode #vortex-hero span:not(.plus):not(.val):not(.number):not(.status-badge),
+body.light-mode #about-hero span:not(.plus):not(.val):not(.number):not(.status-badge),
+body.light-mode #services-hero span:not(.plus):not(.val):not(.number):not(.status-badge),
+body.light-mode #contact-hero span:not(.plus):not(.val):not(.number):not(.status-badge),
+body.light-mode #vortex-hero .hud-data-card,
+body.light-mode #vortex-hero .hud-data-card small,
+body.light-mode #vortex-hero .hud-data-card .value {
+    color: #fff !important;
+}
+
+body.light-mode #main-header .logo a,
+body.light-mode #mega-footer .logo a,
+body.light-mode #main-header .nav-links a,
+body.light-mode #mega-footer .footer-col a,
+body.light-mode #mega-footer .footer-col p,
+body.light-mode #mega-footer .footer-col li,
+body.light-mode #mega-footer .footer-col li i,
+body.light-mode #mega-footer .footer-bottom,
+body.light-mode #mega-footer .footer-bottom p,
+body.light-mode #mega-footer .newsletter-form input,
+body.light-mode #mega-footer .newsletter-form button i,
+body.light-mode #main-header .nav-links .dropbtn {
+    color: #fff !important;
+}
+
+body.light-mode #main-header .hamburger span {
+    background: #fff !important;
+}
+
+/* Fix Contrast for Light Mode Sections */
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+}
+
+/* Specifically handle #stats (Home 1 Section 2) to react to light theme */
+body.light-mode #stats {
+    background: var(--bg-dark) !important;
+}
+
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) h1,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) h2,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) h3,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) h4,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) p,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) li,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) span:not(.plus):not(.val):not(.number):not(.status-badge),
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) .section-title,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) .number {
+    color: #0f172a !important;
+}
+
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) .text-muted,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) .stat-item p,
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) .kpi-footer {
+    color: #475569 !important;
+}
+
+/* Override hardcoded white text in light sections */
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) [style*="color: #fff"],
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) [style*="color:#fff"],
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) [style*="color: white"],
+body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#services-hero):not(#contact-hero) [style*="color:rgb(255, 255, 255)"] {
+    color: #0f172a !important;
 }
 
 .login-btn {
@@ -1929,6 +2079,25 @@ nav.container {
         right: 0;
     }
 
+    .nav-links a.active,
+    .nav-links .dropbtn.active {
+        background: rgba(255, 102, 0, 0.1);
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        border-left: 3px solid var(--primary);
+    }
+
+    .nav-links a.active::after,
+    .nav-links .dropbtn.active::after {
+        display: none;
+    }
+
+    [dir="rtl"] .nav-links a.active,
+    [dir="rtl"] .nav-links .dropbtn.active {
+        border-left: none;
+        border-right: 3px solid var(--primary);
+    }
+
     [dir="rtl"] .nav-links.active {
         right: auto;
         left: 0;
@@ -3421,4 +3590,58 @@ body {
     .testimonial-slider-fake {
         grid-template-columns: 1fr;
     }
+}
+
+/* Auth Page Light Mode Adjustments */
+body.light-mode .auth-page {
+    background: radial-gradient(circle at center, #f8fafc 0%, #e2e8f0 100%);
+}
+
+body.light-mode .auth-card {
+    background: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05) !important;
+}
+
+body.light-mode .auth-brand p,
+body.light-mode .auth-form label,
+body.light-mode .auth-divider span,
+body.light-mode .auth-footer,
+body.light-mode .remember-me {
+    color: var(--text-main) !important;
+}
+
+body.light-mode .auth-form input {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: var(--text-main) !important;
+}
+
+body.light-mode .auth-form input:focus {
+    background: #ffffff !important;
+    border-color: var(--primary) !important;
+}
+
+body.light-mode .social-btn {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: var(--text-main) !important;
+}
+
+body.light-mode .social-btn:hover {
+    background: #f1f5f9 !important;
+    border-color: var(--primary) !important;
+}
+
+body.light-mode .auth-divider::before {
+    background: #cbd5e1 !important;
+}
+
+body.light-mode .auth-divider span {
+    background: #ffffff !important;
+}
+
+body.light-mode .auth-submit:hover {
+    background: var(--bg-dark);
+    color: var(--text-main);
 }

@@ -2,18 +2,81 @@ document.addEventListener('DOMContentLoaded', () => {
     const rtlToggle = document.getElementById('rtl-toggle');
     const html = document.documentElement;
 
-    // RTL Toggle Logic
-    rtlToggle.addEventListener('click', () => {
-        const currentDir = html.getAttribute('dir');
-        const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
-        html.setAttribute('dir', newDir);
-        html.setAttribute('lang', newDir === 'rtl' ? 'ar' : 'en');
+    // Active Page Highlighting
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinksList = document.querySelectorAll('.nav-links a');
 
-        // Save preference
-        localStorage.setItem('dir', newDir);
+    navLinksList.forEach(link => {
+        // Remove existing active class
+        link.classList.remove('active');
+        
+        const href = link.getAttribute('href');
+        if (!href) return;
+
+        const linkPath = href.split('/').pop();
+        
+        // Match path
+        if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
+            link.classList.add('active');
+            
+            // Highlight parent dropdown if exists
+            const dropdown = link.closest('.dropdown');
+            if (dropdown) {
+                const dropbtn = dropdown.querySelector('.dropbtn');
+                if (dropbtn) dropbtn.classList.add('active');
+            }
+        }
     });
 
-    // Check saved preference
+    // Theme Toggle Logic
+    const themeToggles = document.querySelectorAll('#theme-toggle, #dashboard-theme-toggle, #auth-theme-toggle');
+    const body = document.body;
+
+    function updateThemeIcons(isLight) {
+        themeToggles.forEach(t => {
+            const icon = t.querySelector('i');
+            if (icon) {
+                if (isLight) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
+            }
+        });
+    }
+
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+            updateThemeIcons(isLight);
+        });
+    });
+
+    // Check saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        body.classList.add('light-mode');
+        updateThemeIcons(true);
+    }
+
+    // RTL Toggle Logic
+    if (rtlToggle) {
+        rtlToggle.addEventListener('click', () => {
+            const currentDir = html.getAttribute('dir');
+            const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+            html.setAttribute('dir', newDir);
+            html.setAttribute('lang', newDir === 'rtl' ? 'ar' : 'en');
+
+            // Save preference
+            localStorage.setItem('dir', newDir);
+        });
+    }
+
+    // Check saved RTL preference
     const savedDir = localStorage.getItem('dir');
     if (savedDir) {
         html.setAttribute('dir', savedDir);

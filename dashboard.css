@@ -24,6 +24,17 @@
     align-items: center;
 }
 
+.sidebar-header .logo a {
+    font-size: 1.35rem;
+    letter-spacing: 1px;
+    gap: 0.5rem;
+}
+
+.sidebar-header .logo a i {
+    font-size: 1.2rem;
+    padding: 0.3rem;
+}
+
 .mobile-close {
     display: none;
     background: none;
@@ -706,4 +717,43 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
+}
+
+/* Dashboard Light Mode Adjustments */
+body.light-mode .dashboard-body {
+    background-color: var(--bg-dark);
+}
+
+body.light-mode .content-viewport {
+    background: radial-gradient(circle at center, #ffffff 0%, #f8fafc 100%);
+}
+
+body.light-mode .card-value,
+body.light-mode .user-brief .name,
+body.light-mode .dashboard-header h2,
+body.light-mode .sidebar-nav li:hover a,
+body.light-mode .timeline-item .mission-info h5,
+body.light-mode .icon-btn:hover,
+body.light-mode .sidebar-header .logo a,
+body.light-mode .mobile-close,
+body.light-mode .menu-toggle,
+body.light-mode .globe-toggle {
+    color: var(--text-main) !important;
+}
+
+body.light-mode .sidebar-nav li.active a,
+body.light-mode .icon-btn .count {
+    color: #fff !important; /* Keep white text on primary/status backgrounds */
+}
+
+body.light-mode .timeline-item {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+body.light-mode .tactical-radar {
+    background: #0f172a; /* Keep radar dark for tactical feel but slightly adjusted */
+}
+
+body.light-mode .sidebar-footer {
+    border-top-color: var(--glass-border);
 }

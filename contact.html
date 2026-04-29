@@ -19,7 +19,7 @@
     <header id="main-header">
         <nav class="container">
             <div class="logo">
-                <a href="index.html">AUTO<span>CORE</span></a>
+                <a href="index.html"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
             </div>
 
             <ul class="nav-links">
@@ -45,6 +45,9 @@
 
             <div class="header-actions">
                 <a href="login.html" class="login-btn desktop-only">Login</a>
+                <button id="theme-toggle" title="Toggle Light/Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <button id="rtl-toggle" title="Toggle LTR/RTL">
                     <i class="fas fa-globe"></i>
                 </button>
@@ -112,89 +115,13 @@
                     style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
                     <div class="pulse-ring"></div>
                     <i class="fas fa-crosshairs" style="font-size: 3rem; color: var(--primary);"></i>
-                    <h4 style="margin-top: 1rem; color: #fff; letter-spacing: 2px;">HQ TARGET LOCKED</h4>
+                    <h4 style="margin-top: 1rem; color: #fff; letter-spacing: 2px;"></h4>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Comm Uplink (Comm Channels) -->
-        <section id="comm-uplink" class="v-section">
-            <div class="container">
-                <div class="grid-3">
-                    <a href="tel:1-800-AUTODOC" class="glass-card reveal"
-                        style="text-decoration: none; text-align: center;">
-                        <i class="fas fa-phone-volume"
-                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
-                        <h3>VOICE COMS</h3>
-                        <p style="color:var(--primary); font-weight: 700; margin-top: 0.5rem;">1-800-AUTODOC</p>
-                    </a>
-                    <a href="mailto:missions@autocore.com" class="glass-card reveal delay-1"
-                        style="text-decoration: none; text-align: center;">
-                        <i class="fas fa-envelope-open-text"
-                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
-                        <h3>DATA TRANSFER</h3>
-                        <p style="color:var(--primary); font-weight: 700; margin-top: 0.5rem;">missions@autocore.com</p>
-                    </a>
-                    <div class="glass-card reveal delay-2" style="text-align: center;">
-                        <i class="fab fa-signal"
-                            style="font-size: 2.5rem; color: var(--accent); margin-bottom: 1.5rem;"></i>
-                        <h3>LIVE SIGNAL</h3>
-                        <p style="color:var(--primary); font-weight: 700; margin-top: 0.5rem;">SECURED CHAT ENCRYPTED
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 5: Field Report (Direct Transmission Form) -->
-        <section id="field-report" class="v-section" style="background: rgba(255, 94, 0, 0.03);">
-            <div class="container" style="max-width: 900px;">
-                <div class="reveal">
-                    <h2 class="section-title">FIELD <span>REPORT</span></h2>
-                    <form class="booking-form"
-                        style="background: var(--bg-card); padding: 3rem; border: 1px solid var(--glass-border);">
-                        <div class="form-grid">
-                            <div class="form-group icon-input">
-                                <i class="fas fa-user"></i>
-                                <input type="text" placeholder="AGENT NAME" required>
-                            </div>
-                            <div class="form-group icon-input">
-                                <i class="fas fa-id-badge"></i>
-                                <input type="text" placeholder="VIN / LICENSE" required>
-                            </div>
-                        </div>
-                        <div class="form-group icon-input">
-                            <i class="fas fa-envelope"></i>
-                            <input type="email" placeholder="ENCRYPTED EMAIL" required>
-                        </div>
-                        <div class="form-group icon-input">
-                            <i class="fas fa-pen"></i>
-                            <textarea rows="5" placeholder="MISSION OBJECTIVES / SYMPTOMS" required
-                                style="width: 100%; background: #1a1d20; border: 1px solid #2c3136; color: #fff; padding: 1rem 1rem 1rem 3rem; font-family: var(--font-body);"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">SEND TRANSMISSION</button>
-                    </form>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 6: Emergency Extraction (Roadside) -->
-        <section id="emergency-extraction" class="v-section dark-accent"
-            style="border-top: 2px solid #ff4444; border-bottom: 2px solid #ff4444;">
-            <div class="container" style="text-align: center;">
-                <div class="reveal">
-                    <i class="fas fa-exclamation-triangle pulse"
-                        style="color: #ff4444; font-size: 3rem; margin-bottom: 1.5rem;"></i>
-                    <h2 class="section-title">EMERGENCY <span>EXTRACTION</span></h2>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem; font-size: 1.2rem;">IMMEDIATE ROADSIDE
-                        RESPONSE DEPLOYED IN UNDER 30 MINUTES.</p>
-                    <div class="emergency-box" style="margin: 0 auto; display: inline-flex;">
-                        <i class="fas fa-phone-alt"></i>
-                        <span class="phone-number" style="font-size: 2.5rem; letter-spacing: 2px;">1-800-RESCUE</span>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 7: Sector Nodes (Locations) -->
         <section id="sector-nodes" class="v-section">
@@ -264,56 +191,20 @@
                         <a href="#" class="btn btn-outline">SUBMIT DOSSIER</a>
                     </div>
                     <div class="service-media">
-                        <img src="c5.jpg" alt="Mechanic Career"
+                        <img src="ser7.jpg" alt="Mechanic Career"
                             style="border: 1px solid var(--primary); box-shadow: var(--glow);">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 10: Intel Hub (FAQ) -->
-        <section id="support-intel" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
-            <div class="container">
-                <div class="split-layout reveal" style="align-items: flex-start;">
-                    <div class="service-content">
-                        <h2 class="section-title" style="text-align: left;">INTEL <span>HUB</span></h2>
-                        <div class="faq-container">
-                            <div class="faq-item">
-                                <div class="faq-question">ESTIMATED RESPONSE LATENCY? <i class="fas fa-plus"></i></div>
-                                <div class="faq-answer">
-                                    <p>Uplinks are typically processed within 2 standard operational hours.</p>
-                                </div>
-                            </div>
-                            <div class="faq-item">
-                                <div class="faq-question">SECURE ENCRYPTED COMMUNICATIONS? <i class="fas fa-plus"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>All transmissions are AES-256 encrypted through our tactical firewalls.</p>
-                                </div>
-                            </div>
-                            <div class="faq-item">
-                                <div class="faq-question">ONSITE VISITS WITHOUT UPLINK? <i class="fas fa-plus"></i>
-                                </div>
-                                <div class="faq-answer">
-                                    <p>Walk-ins are allowed, but priority is given to pre-established missions.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-media" style="margin-top: 4rem;">
-                        <img src="https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800"
-                            alt="Intel Hub Briefing" style="border: 1px solid var(--primary); box-shadow: var(--glow);">
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer id="mega-footer">
         <div class="container footer-grid">
             <div class="footer-col reveal">
                 <div class="logo">
-                    <a href="#">AUTO<span>CORE</span></a>
+                    <a href="index.html"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
                 </div>
                 <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
             </div>

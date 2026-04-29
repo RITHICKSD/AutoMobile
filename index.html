@@ -19,7 +19,7 @@
     <header id="main-header">
         <nav class="container">
             <div class="logo">
-                <a href="index.html">AUTO<span>CORE</span></a>
+                <a href="index.html"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
             </div>
 
             <ul class="nav-links">
@@ -45,6 +45,9 @@
 
             <div class="header-actions">
                 <a href="login.html" class="login-btn desktop-only">Login</a>
+                <button id="theme-toggle" title="Toggle Light/Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <button id="rtl-toggle" title="Toggle LTR/RTL">
                     <i class="fas fa-globe"></i>
                 </button>
@@ -96,55 +99,6 @@
             </div>
         </section>
 
-        <!-- Section 2: KPI Dashboard -->
-        <section id="stats" class="v-section">
-            <div class="container stats-grid">
-                <div class="stat-card reveal">
-                    <div class="stat-header">
-                        <div class="stat-icon"><i class="fas fa-car-side"></i></div>
-                        <div class="kpi-trend positive"><i class="fas fa-arrow-up"></i> 12%</div>
-                    </div>
-                    <div class="stat-item" data-count="15000">
-                        <span class="number">0</span><span class="plus">+</span>
-                        <p>Cars Revived</p>
-                    </div>
-                    <div class="kpi-footer"><span>Q1 Goal: 18k</span></div>
-                </div>
-                <div class="stat-card reveal delay-1">
-                    <div class="stat-header">
-                        <div class="stat-icon"><i class="fas fa-tools"></i></div>
-                        <div class="kpi-trend positive"><i class="fas fa-arrow-up"></i> 5%</div>
-                    </div>
-                    <div class="stat-item" data-count="250">
-                        <span class="number">0</span>
-                        <p>Expert Mechanics</p>
-                    </div>
-                    <div class="kpi-footer"><span>Capacity: 92%</span></div>
-                </div>
-                <div class="stat-card reveal delay-2">
-                    <div class="stat-header">
-                        <div class="stat-icon"><i class="fas fa-warehouse"></i></div>
-                        <div class="kpi-trend neutral">Stable</div>
-                    </div>
-                    <div class="stat-item" data-count="45">
-                        <span class="number">0</span>
-                        <p>Service Bays</p>
-                    </div>
-                    <div class="kpi-footer"><span>Active: 38</span></div>
-                </div>
-                <div class="stat-card reveal delay-3">
-                    <div class="stat-header">
-                        <div class="stat-icon"><i class="fas fa-crosshairs"></i></div>
-                        <div class="kpi-trend positive"><i class="fas fa-arrow-up"></i> 0.2%</div>
-                    </div>
-                    <div class="stat-item" data-count="99">
-                        <span class="number">0</span><span class="plus">%</span>
-                        <p>Precision Rate</p>
-                    </div>
-                    <div class="kpi-footer"><span>MTTF: 4.8k Hrs</span></div>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 3: Specialization -->
         <section id="specialization" class="v-section">
@@ -509,28 +463,25 @@
                 <h2 class="section-title">THE <span>GRID</span> VIEW</h2>
                 <div class="mosaic-grid">
                     <div class="m-item reveal">
-                        <img src="c1.jpg" alt="Workshop">
+                        <img src="ser1.jpg" alt="Workshop">
                         <div class="m-card"><span>Bays 1-4</span>
                             <p>Active Maintenance</p>
                         </div>
                     </div>
                     <div class="m-item reveal delay-1">
-                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&q=80&w=400"
-                            alt="Workshop">
+                        <img src="ser2.jpg" alt="Workshop">
                         <div class="m-card"><span>Dyno Lab</span>
                             <p>Session in Progress</p>
                         </div>
                     </div>
                     <div class="m-item reveal delay-2">
-                        <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=400"
-                            alt="Workshop">
+                        <img src="ser3.jpg" alt="Workshop">
                         <div class="m-card"><span>Painting</span>
                             <p>Climate Controlled</p>
                         </div>
                     </div>
                     <div class="m-item reveal delay-3">
-                        <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=400"
-                            alt="Workshop">
+                        <img src="ser4.jpg" alt="Workshop">
                         <div class="m-card"><span>ECU Hub</span>
                             <p>Software Patching</p>
                         </div>
@@ -550,8 +501,7 @@
                         <div class="part-meta"><span>Stock: 12</span><span>Level: S-Tier</span></div>
                     </div>
                     <div class="part-card">
-                        <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&q=80&w=200"
-                            alt="Engine">
+                        <img src="ser4.jpg" alt="Engine">
                         <h4>Forged Pistons</h4>
                         <div class="part-meta"><span>Stock: 8</span><span>Level: Race-Spec</span></div>
                     </div>
@@ -611,24 +561,6 @@
             </div>
         </section>
 
-        <!-- Section 16: VIP Club -->
-        <section id="vip" class="v-section">
-            <div class="container reveal">
-                <div class="vip-card">
-                    <div class="vip-header">
-                        <h2>AUTO<span>VIP</span> CLUB</h2>
-                        <i class="fas fa-crown"></i>
-                    </div>
-                    <p>Exclusive rewards, priority scheduling, and members-only track events. Join the elite.</p>
-                    <ul class="vip-perks">
-                        <li><i class="fas fa-star"></i> 20% Discount on Tuning</li>
-                        <li><i class="fas fa-star"></i> Free Annual Multi-point Inspection</li>
-                        <li><i class="fas fa-star"></i> Priority Response Roadside Help</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary">Join the Club</a>
-                </div>
-            </div>
-        </section>
 
         <!-- Section 17: Smart FAQ -->
         <section id="faq" class="v-section">
@@ -742,7 +674,7 @@
             <div class="container footer-grid">
                 <div class="footer-col reveal">
                     <div class="logo">
-                        <a href="#">AUTO<span>CORE</span></a>
+                        <a href="#"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
                     </div>
                     <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
                 </div>

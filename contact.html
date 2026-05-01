@@ -32,7 +32,7 @@
                 </li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Dashboard <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
@@ -74,7 +74,7 @@
                     mission. Resolution in progress.
                 </p>
                 <div class="reveal delay-2">
-                    <a href="#field-report" class="btn btn-primary">Initiate Uplink</a>
+                    <a href="#hq-briefing" class="btn btn-primary">Initiate Uplink</a>
                 </div>
             </div>
         </section>
@@ -105,25 +105,54 @@
             </div>
         </section>
 
-        <!-- Section 3: Tactical Map (Visual) -->
+        <!-- Section 3: Tactical Map -->
         <section id="tactical-map" class="v-section" style="padding: 0;">
-            <div style="width: 100%; height: 500px; background: #0a0c0e; position: relative;">
+            <div style="width: 100%; height: 400px; background: #0a0c0e; position: relative;">
                 <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2000"
                     alt="Map View"
                     style="width:100%; height:100%; object-fit:cover; opacity: 0.4; filter: grayscale(100%) contrast(120%);">
                 <div class="map-overlay"
                     style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
-                    <div class="pulse-ring"></div>
                     <i class="fas fa-crosshairs" style="font-size: 3rem; color: var(--primary);"></i>
                     <h4 style="margin-top: 1rem; color: #fff; letter-spacing: 2px;"></h4>
                 </div>
             </div>
         </section>
 
+        <!-- Section 4: Secure Transmission (Contact Form) -->
+        <section id="contact-form" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+            <div class="container">
+                <div class="split-layout reveal" style="align-items: flex-start;">
+                    <div class="form-content" style="flex: 1.2;">
+                        <h2 class="section-title" style="text-align: left;">SECURE <span>TRANSMISSION</span></h2>
+                        <p style="color: var(--text-muted); margin-bottom: 2.5rem;">Initialize a direct uplink to our engineering core. All communications are encrypted.</p>
+                        <form class="transmission-form" style="display: grid; gap: 1.5rem;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <input type="text" placeholder="AGENT NAME" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1rem; color: #fff; font-family: var(--font-heading);">
+                                <input type="email" placeholder="UPLINK EMAIL" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1rem; color: #fff; font-family: var(--font-heading);">
+                            </div>
+                            <select style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1rem; color: #fff; font-family: var(--font-heading);">
+                                <option>SELECT MISSION TYPE</option>
+                                <option>ECU RE-MAPPING</option>
+                                <option>STRUCTURAL RE-FORGING</option>
+                                <option>TRACK PREP</option>
+                            </select>
+                            <textarea placeholder="MISSION DETAILS..." rows="5" style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 1rem; color: #fff; font-family: var(--font-heading);"></textarea>
+                            <button type="submit" class="btn btn-primary" style="width: fit-content; padding: 1rem 3rem;">SEND UPLINK</button>
+                        </form>
+                    </div>
+                    <div class="form-sidebar desktop-only" style="flex: 0.8; padding-left: 3rem;">
+                        <div class="status-box" style="background: var(--bg-card); border: 1px solid var(--primary); padding: 2rem; border-radius: 8px;">
+                            <div class="pulse-ring" style="width: 10px; height: 10px; margin-bottom: 1rem;"></div>
+                            <h4 style="color: var(--primary); margin-bottom: 0.5rem;">SYSTEM STATUS</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-muted);">Uplink nodes active in 3 sectors. Average response time: 0.4ms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-
-
-        <!-- Section 7: Sector Nodes (Locations) -->
+        <!-- Section 5: Sector Nodes (Locations) -->
         <section id="sector-nodes" class="v-section">
             <div class="container">
                 <h2 class="section-title">SECTOR <span>NODES</span></h2>
@@ -150,7 +179,7 @@
             </div>
         </section>
 
-        <!-- Section 8: Social Sync (Social Grid) -->
+        <!-- Section 6: Social Sync (Digital Footprint) -->
         <section id="digital-footprint" class="v-section" style="background: var(--bg-card);">
             <div class="container" style="text-align: center;">
                 <h2 class="section-title">SOCIAL <span>SYNC</span></h2>
@@ -169,74 +198,62 @@
             </div>
         </section>
 
-        <!-- Section 9: Mechanic Intake (Careers) -->
+        <!-- Section 7: Mechanic Intake -->
         <section id="mechanic-intake" class="v-section">
             <div class="container">
                 <div class="split-layout reveal" style="align-items: center;">
                     <div class="service-content">
-                        <h2 class="section-title" style="text-align: left;">MASTER <span>INTAKE</span></h2>
-                        <p style="color: var(--text-muted); margin-bottom: 2rem;">ARE YOU A MASTER-TIER TECHNICIAN? WE
-                            ARE RECRUITING TOP AGENTS FOR ELITE MISSIONS.</p>
-                        <ul style="list-style: none; color: #fff; margin-bottom: 2.5rem;">
-                            <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                    style="color: var(--primary); margin-right: 0.5rem;"></i> L3 MASTER CERTIFICATION
-                                REQUIRED</li>
-                            <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                    style="color: var(--primary); margin-right: 0.5rem;"></i> PRECISION TOOL PROFICIENCY
-                            </li>
-                            <li style="margin-bottom: 1rem;"><i class="fas fa-check-circle"
-                                    style="color: var(--primary); margin-right: 0.5rem;"></i> COMPETITIVE CREDITS & GEAR
-                            </li>
-                        </ul>
-                        <a href="#" class="btn btn-outline">SUBMIT DOSSIER</a>
+                        <h2 class="section-title">MASTER <span>INTAKE</span></h2>
+                        <p style="color: var(--text-muted); margin-bottom: 2rem;">Recruiting elite agents for performance missions.</p>
+                        <a href="#" class="btn btn-outline">Submit Dossier</a>
                     </div>
                     <div class="service-media">
-                        <img src="ser7.jpg" alt="Mechanic Career"
-                            style="border: 1px solid var(--primary); box-shadow: var(--glow);">
+                        <img src="ser7.jpg" alt="Careers" style="border: 1px solid var(--primary); width: 100%; border-radius: 8px;">
                     </div>
                 </div>
             </div>
         </section>
 
-    </main>
-
-    <footer id="mega-footer">
-        <div class="container footer-grid">
-            <div class="footer-col reveal">
-                <div class="logo">
-                    <a href="index.html"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
+        <!-- Section 8: Mega Footer -->
+        <footer id="mega-footer">
+            <div class="container footer-grid">
+                <div class="footer-col reveal">
+                    <div class="logo">
+                        <a href="index.html"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
+                    </div>
+                    <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
                 </div>
-                <p>The sanctuary for high-performance automobiles. Precision, Passion, Performance.</p>
+                <div class="footer-col reveal delay-1">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="index.html">Home 1</a></li>
+                        <li><a href="index2.html">Home 2</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col reveal delay-2">
+                    <h4>Contact Us</h4>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Precision Dr, Engine City</li>
+                        <li><i class="fas fa-phone-alt"></i> +1 800-AUTODOC</li>
+                        <li><i class="fas fa-envelope"></i> missions@autocore.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col reveal delay-3">
+                    <h4>Stay Synced</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Email for updates">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
             </div>
-            <div class="footer-col reveal delay-1">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="index.html">Home 1</a></li>
-                    <li><a href="index2.html">Home 2</a></li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AUTOCORE Precision Center. All Rights Reserved.</p>
             </div>
-            <div class="footer-col reveal delay-2">
-                <h4>Contact Us</h4>
-                <ul class="contact-list">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Precision Dr, Engine City</li>
-                    <li><i class="fas fa-phone-alt"></i> +1 800-AUTODOC</li>
-                    <li><i class="fas fa-envelope"></i> missions@autocore.com</li>
-                </ul>
-            </div>
-            <div class="footer-col reveal delay-3">
-                <h4>Stay Synced</h4>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Email for updates">
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 AUTOCORE Precision Center. All Rights Reserved.</p>
-        </div>
-    </footer>
+        </footer>
+
+    </main>
 
     <script src="script.js"></script>
 </body>

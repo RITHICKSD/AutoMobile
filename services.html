@@ -61,9 +61,9 @@
     </header>
 
     <main>
-        <!-- Section 1: Elite Performance Tuning (Hero) -->
+        <!-- Section 1: Services Hero -->
         <section id="services-hero" class="v-section"
-            style="background: linear-gradient(135deg, rgba(10, 12, 14, 0.9) 0%, rgba(10, 12, 14, 0.4) 100%), url('https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat; padding-top: 180px; padding-bottom: 120px; text-align: center;">
+            style="background: linear-gradient(135deg, rgba(10, 12, 14, 0.9) 0%, rgba(10, 12, 14, 0.4) 100%), url('ser10.jpg') center/cover no-repeat; padding-top: 180px; padding-bottom: 120px; text-align: center;">
             <div class="container hero-content reveal">
                 <div class="status-badge" style="margin: 0 auto 1.5rem;"><span class="pulse"></span> CAPABILITIES
                     UNLOCKED</div>
@@ -77,7 +77,7 @@
             </div>
         </section>
 
-        <!-- Section 2: ECU Calibration (Split Layout) -->
+        <!-- Section 2: ECU Calibration -->
         <section id="ecu-calibration" class="v-section">
             <div class="container">
                 <div class="split-layout" style="align-items: center;">
@@ -89,210 +89,79 @@
                         <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Ignition timing,
                             fuel delivery, and boost mapping completely rewritten for optimal power delivery and
                             throttle response.</p>
-                        <div class="stage-grid">
-                            <div class="stage-card s1">
+                        <div class="stage-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem;">
+                            <div class="stage-card" style="background: var(--bg-card); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 8px; text-align: center;">
                                 <h4>STAGE 1</h4>
                                 <small>Software Only</small>
                             </div>
-                            <div class="stage-card s2">
+                            <div class="stage-card" style="background: var(--bg-card); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 8px; text-align: center;">
                                 <h4>STAGE 2</h4>
                                 <small>Bolt-On Required</small>
                             </div>
-                            <div class="stage-card s3">
+                            <div class="stage-card" style="background: var(--bg-card); padding: 1.5rem; border: 1px solid var(--glass-border); border-radius: 8px; text-align: center;">
                                 <h4>STAGE 3</h4>
-                                <small>Turbo/Super Swap</small>
+                                <small>Turbo Swap</small>
                             </div>
                         </div>
                     </div>
                     <div class="service-media reveal delay-1"
                         style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
-                        <img src="ser6.jpg" alt="Engine Bay" style="object-fit: cover; filter: contrast(1.1);">
+                        <img src="ser6.jpg" alt="Engine Bay" style="object-fit: cover; filter: contrast(1.1); width: 100%;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: TCU & Transmission (Split Layout Reverse) -->
-        <section id="tcu-tuning" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+        <!-- Section 3: TCU Sync -->
+        <section id="tcu-sync" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
             <div class="container">
                 <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
                     <div class="service-content reveal">
-                        <div class="status-badge" style="background: var(--primary);"><i class="fas fa-cogs"></i>
-                            DRIVETRAIN</div>
-                        <h2 class="section-title">TCU <span>OPTIMIZATION</span></h2>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Eliminate shift lag
-                            and raise torque limits. Our Transmission Control Unit mapping ensures power hits the
-                            pavement instantly.</p>
-                        <ul
-                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #fff;">
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-caret-right" style="color: var(--primary); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Adjusted Shift Points & Firmness</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-caret-right" style="color: var(--primary); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Increased Clutch Clamping Force</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-caret-right" style="color: var(--primary); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Advanced Launch Control Metrics</span>
-                            </li>
+                        <div class="status-badge" style="background: var(--primary);"><i class="fas fa-cogs"></i> DRIVETRAIN</div>
+                        <h2 class="section-title">TCU <span>SYNC</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Transmission Control Unit mapping for lightning-fast shifts and improved clutch clamping force.</p>
+                        <ul style="list-style: none; color: #fff;">
+                            <li><i class="fas fa-caret-right" style="color: var(--primary);"></i> Reduced Shift Lag</li>
+                            <li><i class="fas fa-caret-right" style="color: var(--primary);"></i> Increased Torque Limits</li>
                         </ul>
                     </div>
                     <div class="service-media reveal delay-1"
-                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(255, 94, 0, 0.1);">
-                        <img src="ser7.jpg" alt="Track Launch" style="object-fit: cover; filter: contrast(1.1);">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Section 5: Bespoke Exhaust Systems (Split Layout) -->
-        <section id="exhaust" class="v-section">
-            <div class="container">
-                <div class="split-layout" style="align-items: center;">
-                    <div class="service-content reveal">
-                        <div class="status-badge" style="background: var(--accent); color: #000;"><i
-                                class="fas fa-fire-alt"></i>
-                            FABRICATION</div>
-                        <h2 class="section-title">BESPOKE <span>EXHAUST SYSTEMS</span></h2>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Titanium and
-                            inconel systems hand-welded to your specifications. We engineer exhaust flow to eliminate
-                            backpressure and shape your vehicle's acoustic signature.</p>
-                        <ul
-                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #fff;">
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-volume-up" style="color: var(--accent); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Valvetronic Acoustic Control</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-weight-hanging" style="color: var(--accent); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Up to 40% Weight Reduction</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-wind" style="color: var(--accent); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Optimized Scavenging Effect</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="service-media reveal delay-1"
-                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
-                        <img src="ser9.jpg" alt="Supercar Exhaust" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 6: Forced Induction Upgrades (Split Reverse) -->
-        <section id="forced-induction" class="v-section" style="background: rgba(255, 94, 0, 0.02);">
-            <div class="container">
-                <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
-                    <div class="service-content reveal">
-                        <div class="status-badge" style="background: var(--primary);"><i class="fas fa-fan"></i> BOOST
-                            ARCHITECTURE</div>
-                        <h2 class="section-title">FORCED <span>INDUCTION</span></h2>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Massive volumetric
-                            efficiency gains. We design, plumb, and map custom twin-turbo and supercharger
-                            configurations for extreme power goals.</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <div
-                                style="background: var(--bg-card); padding: 1.5rem; border: 1px solid var(--glass-border); border-left: 3px solid var(--primary); border-radius: 8px;">
-                                <h4 style="color: #fff; font-family: var(--font-heading);">TWIN HYBRID</h4>
-                                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Quick spool
-                                    upgrades.</p>
-                            </div>
-                            <div
-                                style="background: var(--bg-card); padding: 1.5rem; border: 1px solid var(--glass-border); border-left: 3px solid #00ff88; border-radius: 8px;">
-                                <h4 style="color: #fff; font-family: var(--font-heading);">BIG SINGLE</h4>
-                                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0;">Top-end absolute
-                                    power.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="service-media reveal delay-1"
-                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(255, 94, 0, 0.1);">
-                        <img src="ser10.jpg" alt="Engine Turbocharger" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 7: Engine Building (Grid Layout) -->
-        <section id="engine-building" class="v-section">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <h2 class="section-title">INTERNALS <span>FORGED</span></h2>
-                    <p>Building bulletproof engines capable of handling quadruple-digit figures.</p>
-                </div>
-
-                <div class="split-layout" style="margin-top: 3rem; align-items: start;">
-                    <div class="service-media reveal"
                         style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border);">
-                        <img src="ser11.jpg" alt="Forged Internals" style="height: 100%; object-fit: cover;">
-                    </div>
-                    <div class="data-nodes-grid reveal delay-1"
-                        style="flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <div class="node-card"
-                            style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px;">
-                            <i class="fas fa-layer-group"
-                                style="font-size: 2rem; color: #00ff88; margin-bottom: 1rem;"></i>
-                            <h4 style="color: #fff; font-family: var(--font-heading);">SLEEVING</h4>
-                            <p style="color: var(--text-muted); font-size: 0.85rem;">Darton sleeve installation for
-                                extreme cylinder strength.</p>
-                        </div>
-                        <div class="node-card"
-                            style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px;">
-                            <i class="fas fa-cut"
-                                style="font-size: 2rem; color: var(--accent); margin-bottom: 1rem;"></i>
-                            <h4 style="color: #fff; font-family: var(--font-heading);">CNC PORTING</h4>
-                            <p style="color: var(--text-muted); font-size: 0.85rem;">5-axis machined cylinder heads for
-                                massive airflow.</p>
-                        </div>
-                        <div class="node-card"
-                            style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px; grid-column: span 2;">
-                            <i class="fas fa-balance-scale"
-                                style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;"></i>
-                            <h4 style="color: #fff; font-family: var(--font-heading);">DYNAMIC BALANCING</h4>
-                            <p style="color: var(--text-muted); font-size: 0.85rem;">Rotating assemblies balanced to
-                                within 0.1 grams for 10,000+ RPM reliability.</p>
-                        </div>
+                        <img src="ser5.jpg" alt="Transmission Tuning" style="object-fit: cover; width: 100%;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 8: Aerodynamics (Full Width Image Left) -->
-        <section id="aerodynamics" class="v-section" style="background: rgba(0, 212, 255, 0.02); overflow: hidden;">
+        <!-- Section 4: Exhaust Flow -->
+        <section id="exhaust-flow" class="v-section">
             <div class="container">
                 <div class="split-layout" style="align-items: center;">
-                    <div class="service-media reveal"
-                        style="flex: 1.5; border-radius: 12px; overflow: hidden; position: relative;">
-                        <img src="ser3.jpg" alt="Aerodynamic Carbon Wing"
-                            style="object-fit: cover; filter: contrast(1.1);">
-                        <div class="hud-scanner"></div>
+                    <div class="service-content reveal">
+                        <div class="status-badge" style="background: var(--accent); color: #000;"><i class="fas fa-wind"></i> FLOW</div>
+                        <h2 class="section-title">EXHAUST <span>FLOW</span></h2>
+                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">High-flow tactical exhaust systems engineered for maximum gas velocity.</p>
+                        <ul style="list-style: none; color: #fff;">
+                            <li><i class="fas fa-check" style="color: var(--accent);"></i> Titanium Fabrication</li>
+                            <li><i class="fas fa-check" style="color: var(--accent);"></i> Valvetronic Control</li>
+                        </ul>
                     </div>
-                    <div class="service-content reveal delay-1" style="flex: 1; padding-left: 2rem;">
-                        <div class="status-badge" style="background: #00ff88; color: #000;"><i class="fas fa-wind"></i>
-                            DOWNFORCE</div>
-                        <h2 class="section-title">AERODYNAMIC <span>PROFILING</span></h2>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Wind-tunnel tested
-                            carbon fiber composites designed to slice air and aggressively stick your vehicle to the
-                            tarmac at high velocity.</p>
-                        <a href="#contact" class="btn btn-outline">Request Aero Consult</a>
+                    <div class="service-media reveal delay-1"
+                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border);">
+                        <img src="ser4.jpg" alt="Exhaust System" style="object-fit: cover; width: 100%;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 9: Track-Focused Suspension (Split Layout Reverse) -->
-        <section id="suspension" class="v-section">
+        <!-- Section 5: Track-Focused Suspension -->
+        <section id="suspension" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
             <div class="container">
                 <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
                     <div class="service-content reveal">
                         <div class="status-badge" style="background: var(--accent); color: #000;"><i
                                 class="fas fa-compress-arrows-alt"></i> KINEMATICS</div>
-                        <h2 class="section-title">TRACK-FOCUSED <span>SUSPENSION</span></h2>
+                        <h2 class="section-title">TRACK <span>SUSPENSION</span></h2>
                         <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Perfecting
                             geometry. We utilize corner-balancing and multi-way adjustable coilovers to deliver
                             razor-sharp turn-in and mid-corner stability.</p>
@@ -306,31 +175,27 @@
                                 <i class="fas fa-check-circle" style="color: var(--accent); font-size: 1.2rem;"></i>
                                 <span style="font-size: 1.1rem;">Custom Spring Rates</span>
                             </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-check-circle" style="color: var(--accent); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Bushing Deflection Eradication</span>
-                            </li>
                         </ul>
                     </div>
                     <div class="service-media reveal delay-1"
                         style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
-                        <img src="ser2.jpg" alt="Track Suspension" style="object-fit: cover;">
+                        <img src="ser2.jpg" alt="Track Suspension" style="object-fit: cover; width: 100%;">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 10: High-Performance Braking Systems (Split Layout) -->
-        <section id="braking" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
+        <!-- Section 4: High-Performance Braking -->
+        <section id="braking" class="v-section">
             <div class="container">
                 <div class="split-layout" style="align-items: center;">
                     <div class="service-content reveal">
                         <div class="status-badge" style="background: #00ff88; color: #000;"><i
                                 class="fas fa-stop-circle"></i> DECELERATION</div>
-                        <h2 class="section-title">HIGH-PERFORMANCE <span>BRAKING</span></h2>
+                        <h2 class="section-title">ELITE <span>BRAKING</span></h2>
                         <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Going fast requires
                             stopping faster. We install and tune carbon-ceramic big brake kits capable of withstanding
-                            extreme thermal loads without fade.</p>
+                            extreme thermal loads.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <span
                                 style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 0.5rem 1rem; border-radius: 4px; color: var(--accent);"><i
@@ -338,116 +203,17 @@
                             <span
                                 style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 0.5rem 1rem; border-radius: 4px; color: var(--accent);"><i
                                     class="fas fa-tint"></i> Racing Fluid Swaps</span>
-                            <span
-                                style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 0.5rem 1rem; border-radius: 4px; color: var(--accent);"><i
-                                    class="fas fa-cog"></i> Master Cylinder Upgrades</span>
                         </div>
                     </div>
                     <div class="service-media reveal delay-1"
                         style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 255, 136, 0.1);">
-                        <img src="ser3.jpg" alt="Ceramic Brakes" style="object-fit: cover;">
+                        <img src="ser3.jpg" alt="Ceramic Brakes" style="object-fit: cover; width: 100%;">
                     </div>
                 </div>
             </div>
         </section>
 
-
-        <!-- Section 12: Race Day Prep & Support (Split Layout Reverse) -->
-        <section id="race-prep" class="v-section">
-
-            <div class="container">
-                <div class="split-layout" style="align-items: center; flex-direction: row-reverse;">
-                    <div class="service-content reveal">
-                        <div class="status-badge" style="background: var(--primary);"><i
-                                class="fas fa-flag-checkered"></i> TRACKSIDE</div>
-                        <h2 class="section-title">RACE DAY <span>SUPPORT</span></h2>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">Full pit-lane
-                            logistics. From tire warmers to live telemetry monitoring, our engineers ensure your vehicle
-                            performs flawlessly under competitive conditions.</p>
-                        <a href="#contact" class="btn btn-primary" style="margin-right: 1rem;">Reserve Pit Crew</a>
-                    </div>
-                    <div class="service-media reveal delay-1"
-                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(255, 94, 0, 0.1);">
-                        <img src="race.webp" alt="Race Pit Crew" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 13: Structural Reinforcement (Split Layout) -->
-        <section id="structural" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
-
-            <div class="container">
-                <div class="split-layout" style="align-items: center;">
-                    <div class="service-content reveal">
-                        <div class="status-badge" style="background: var(--accent); color: #000;"><i
-                                class="fas fa-cubes"></i>
-                            RIGIDITY</div>
-                        <h2 class="section-title">STRUCTURAL <span>REINFORCEMENT</span></h2>
-                        <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;">FIA-certified roll
-                            cages, strut braces, and seam welding. We stiffen the chassis to precisely communicate
-                            suspension loads directly to the driver.</p>
-                        <ul
-                            style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem; color: #fff;">
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-shield-alt" style="color: var(--accent); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Chromoly Steel Tube Fabrication</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-shield-alt" style="color: var(--accent); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Advanced Laser Measurement</span>
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px;">
-                                <i class="fas fa-shield-alt" style="color: var(--accent); font-size: 1.2rem;"></i>
-                                <span style="font-size: 1.1rem;">Custom Gusseting</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="service-media reveal delay-1"
-                        style="flex: 1; border-radius: 12px; overflow: hidden; border: 1px solid var(--glass-border); box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);">
-                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?auto=format&fit=crop&q=80&w=1200"
-                            alt="Chassis Works" style="object-fit: cover; filter: grayscale(0.5);">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 14: Bespoke Wheels & Tires (Bento style grid) -->
-        <section id="wheels" class="v-section">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <h2 class="section-title">WHEELS & <span>CONTACT PATCH</span></h2>
-                    <p>Reducing unsprung mass. Maximizing mechanical grip.</p>
-                </div>
-
-                <div class="bento-grid"
-                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 3rem;">
-                    <div class="bento-item large reveal"
-                        style="grid-column: span 2; position: relative; border-radius: 8px; overflow: hidden; border: 1px solid var(--glass-border);">
-                        <img src="c3.jpg" alt="Forged Wheels"
-                            style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
-                        <div
-                            style="position: absolute; bottom: 0; left: 0; padding: 2rem; width: 100%; background: linear-gradient(transparent, rgba(10, 12, 14, 0.9));">
-                            <h3 style="color: var(--accent); font-family: var(--font-heading);">FORGED ALLOY SOURCING
-                            </h3>
-                            <p style="color: #fff;">Custom offsets engineered specifically for brake clearance and
-                                optimal fender flush fitment.</p>
-                        </div>
-                    </div>
-                    <div class="bento-item reveal delay-1"
-                        style="background: var(--bg-card); border: 1px solid var(--glass-border); padding: 2rem; border-radius: 8px; display: flex; flex-direction: column; justify-content: center;">
-                        <i class="fas fa-dharmachakra"
-                            style="font-size: 3rem; color: #00ff88; margin-bottom: 1rem;"></i>
-                        <h4 style="color: #fff; font-family: var(--font-heading);">R-COMPOUND TIRES</h4>
-                        <p style="color: var(--text-muted); font-size: 0.9rem;">Sourcing the exact rubber compound
-                            needed for your specific track temperatures and surface abrasive qualities.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Section 20: Mega Footer -->
+        <!-- Section 5: Mega Footer -->
         <footer id="mega-footer">
             <div class="container footer-grid">
                 <div class="footer-col reveal">

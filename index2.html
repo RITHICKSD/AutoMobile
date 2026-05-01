@@ -78,7 +78,7 @@
                         your vehicle.</p>
                     <div class="cta-group">
                         <a href="#metrics" class="btn btn-primary">Initialize Scan</a>
-                        <a href="#tech" class="btn btn-outline">View Blueprints</a>
+                        <a href="#architects" class="btn btn-outline">View Team</a>
                     </div>
                 </div>
                 <div class="hero-visual reveal delay-2">
@@ -131,95 +131,28 @@
         </section>
 
         <!-- Section 3: Lab Specializations (Bento Grid) -->
-        <section id="tech" class="v-section">
+        <section id="tech" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
             <div class="container">
                 <div class="section-header reveal">
                     <h2 class="section-title">LAB <span>SPECIALS</span></h2>
                     <p>Dedicated zones for high-fidelity service</p>
                 </div>
-                <div class="bento-grid reveal delay-1">
-                    <div class="bento-item">
-                        <i class="fas fa-microchip fa-3x mb-3" style="color: var(--accent);"></i>
+                <div class="bento-grid reveal delay-1" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                    <div class="bento-item" style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px;">
+                        <i class="fas fa-microchip fa-2x mb-3" style="color: var(--accent); margin-bottom: 1rem;"></i>
                         <h3>ECM_CORE</h3>
                         <p>Deep-level programming and neural link tuning.</p>
                     </div>
-                    <div class="bento-item">
-                        <i class="fas fa-wind fa-2x mb-3" style="color: var(--accent);"></i>
-                        <h4>AERO_FLOW</h4>
+                    <div class="bento-item" style="background: var(--bg-card); padding: 2rem; border: 1px solid var(--glass-border); border-radius: 8px;">
+                        <i class="fas fa-wind fa-2x mb-3" style="color: var(--accent); margin-bottom: 1rem;"></i>
+                        <h3>AERO_FLOW</h3>
                         <p>Thermal air-intake diagnostics.</p>
                     </div>
-                    <div class="bento-item">
-                        <i class="fas fa-atom fa-2x mb-3" style="color: var(--accent);"></i>
-                        <h4>META_SYNC</h4>
-                        <p>Liquid diagnostic analysis.</p>
-                    </div>
-                    <div class="bento-item">
-                        <i class="fas fa-shield-alt fa-2x mb-3" style="color: var(--accent);"></i>
-                        <h4>ARMOR_SYNC</h4>
-                        <p>Structural integrity scanning and repair.</p>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 4: Precision History (Timeline) -->
-        <section id="history" class="v-section">
-            <div class="container">
-                <div class="section-header text-right reveal">
-                    <h2 class="section-title">PRECISION <span>TIMELINE</span></h2>
-                    <p>The evolution of our diagnostic mission</p>
-                </div>
-                <div class="timeline-scroll-container reveal delay-1">
-                    <div class="timeline-milestone">
-                        <div class="year">2018</div>
-                        <h4>OS_V1.0 INITIALIZED</h4>
-                        <p>First tactical diagnostic unit deployed in Central City.</p>
-                    </div>
-                    <div class="timeline-milestone active">
-                        <div class="year">2021</div>
-                        <h4>QUANTUM LINK</h4>
-                        <p>Integration of AI-driven predictive tuning models.</p>
-                    </div>
-                    <div class="timeline-milestone">
-                        <div class="year">2026</div>
-                        <h4>VORTEX_CORE</h4>
-                        <p>Global deployment of HUD-sync service platforms.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Optical Scan -->
-        <section id="scan" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <h2 class="section-title">OPTICAL <span>SCAN</span></h2>
-                    <p>Live visual data representation</p>
-                </div>
-                <div class="scan-visualizer reveal delay-1">
-                    <div class="scan-line"></div>
-                </div>
-                <div class="scan-result-grid">
-                    <div class="scan-card reveal">
-                        <i class="fas fa-microchip"></i>
-                        <small style="color: var(--text-muted); font-family: var(--font-heading);">BODY_SCAN</small>
-                        <h4 style="margin-top: 0.5rem;">INTEGRITY: 99.4%</h4>
-                    </div>
-                    <div class="scan-card reveal delay-1">
-                        <i class="fas fa-oil-can"></i>
-                        <small style="color: var(--text-muted); font-family: var(--font-heading);">FLUID_SCAN</small>
-                        <h4 style="margin-top: 0.5rem;">VISCOSITY: OPTIMAL</h4>
-                    </div>
-                    <div class="scan-card reveal delay-2">
-                        <i class="fas fa-atom"></i>
-                        <small style="color: var(--text-muted); font-family: var(--font-heading);">CORE_SCAN</small>
-                        <h4 style="margin-top: 0.5rem;">ERRORS: NULL</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 6: Master Architects -->
+        <!-- Section 4: Master Architects -->
         <section id="architects" class="v-section">
             <div class="container">
                 <div class="section-header reveal">
@@ -260,41 +193,32 @@
             </div>
         </section>
 
-        <!-- Section 7: Service Matrix (Comparison Table) -->
-        <section id="matrix" class="v-section">
+        <!-- Section 5: Service Matrix (Comparison Table) -->
+        <section id="matrix" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
             <div class="container">
                 <div class="section-header text-center reveal">
                     <h2 class="section-title">SERVICE <span>MATRIX</span></h2>
                     <p>Comparing optimization tiers for your machine</p>
                 </div>
-                <div class="reveal delay-1 table-responsive">
-                    <table class="matrix-table">
+                <div class="reveal delay-1 table-responsive" style="margin-top: 2rem;">
+                    <table class="matrix-table" style="width: 100%; border-collapse: collapse; text-align: left; color: #fff;">
                         <thead>
-                            <tr>
-                                <th>Feature</th>
-                                <th>Standard</th>
-                                <th>Precision+</th>
-                                <th>Quantum-Tier</th>
+                            <tr style="border-bottom: 1px solid var(--glass-border);">
+                                <th style="padding: 1rem;">Feature</th>
+                                <th style="padding: 1rem;">Standard</th>
+                                <th style="padding: 1rem;">Precision+</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>ECU Re-Mapping</td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
+                            <tr style="border-bottom: 1px solid var(--glass-border);">
+                                <td style="padding: 1rem;">ECU Re-Mapping</td>
+                                <td style="padding: 1rem;"><i class="fas fa-check" style="color: var(--accent);"></i></td>
+                                <td style="padding: 1rem;"><i class="fas fa-check" style="color: var(--accent);"></i></td>
                             </tr>
-                            <tr class="highlight">
-                                <td>AI Predictive Diagnostics</td>
-                                <td>-</td>
-                                <td><i class="fas fa-check"></i></td>
-                                <td><i class="fas fa-check"></i></td>
-                            </tr>
-                            <tr>
-                                <td>Real-time HUD Sync</td>
-                                <td>-</td>
-                                <td>-</td>
-                                <td><i class="fas fa-check"></i></td>
+                            <tr style="border-bottom: 1px solid var(--glass-border);">
+                                <td style="padding: 1rem;">AI Diagnostics</td>
+                                <td style="padding: 1rem;">-</td>
+                                <td style="padding: 1rem;"><i class="fas fa-check" style="color: var(--accent);"></i></td>
                             </tr>
                         </tbody>
                     </table>
@@ -302,146 +226,7 @@
             </div>
         </section>
 
-        <!-- Section 8: Brand Network (Infinite Marquee) -->
-        <section id="brands-network" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
-            <div class="container">
-                <div class="brand-network-container reveal">
-                    <div class="brand-monochrome-marquee">
-                        <span>TESLA</span>
-                        <span>PORSCHE</span>
-                        <span>MERCEDES-BENZ</span>
-                        <span>BMW</span>
-                        <span>AUDI</span>
-                        <span>NISSAN GTR</span>
-                        <span>TESLA</span>
-                        <span>PORSCHE</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 9: Waveform Testimonials -->
-        <section id="waveforms" class="v-section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">PILOT <span>FEEDBACK</span></h2>
-                    <p>Verified performance logs from our users</p>
-                </div>
-                <div class="testimonial-split">
-                    <div class="testimonial-quote-list reveal delay-1">
-                        <div class="testimonial-item">
-                            <p class="quote">"The transition to Quantum-Tier tuning has shifted my GTR's power curve
-                                beyond anything I've experienced. Pure digital precision."</p>
-                            <div class="user-meta">-- UNIT_042 | ADVANCED PILOT</div>
-                        </div>
-                        <div class="testimonial-item">
-                            <p class="quote">"Diagnostic accuracy is unmatched. The HUD sync provides real-time data
-                                that
-                                keeps my performance at its peak."</p>
-                            <div class="user-meta">-- MISSION_CMDR_X | ELITE PILOT</div>
-                        </div>
-                        <div class="testimonial-item">
-                            <p class="quote">"AutoCore's neural re-mapping is a game-changer for high-fidelity machines.
-                                Truly the next level of engineering."</p>
-                            <div class="user-meta">-- ARCHITECT_S | TECH LEAD</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-media reveal delay-2">
-                        <img src="pilot.jpg" alt="Advanced Diagnostics Illustration">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 10: Tech Flow (SVG Nodes) -->
-        <section id="tech-flow" class="v-section">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <h2 class="section-title">DATA <span>FLOW</span></h2>
-                    <p>Visualizing the diagnostic ecosystem</p>
-                </div>
-                <div class="data-nodes-grid reveal">
-                    <div class="data-node-card">
-                        <div class="node-icon"><i class="fas fa-satellite"></i></div>
-                        <div class="node-info">
-                            <h4>SAT_UPLINK</h4>
-                            <small style="color: var(--accent); font-family: var(--font-heading);">STABLE</small>
-                        </div>
-                    </div>
-                    <div class="data-node-card">
-                        <div class="node-icon"><i class="fas fa-server"></i></div>
-                        <div class="node-info">
-                            <h4>CORE_STORAGE</h4>
-                            <small style="color: var(--accent); font-family: var(--font-heading);">ENCRYPTED</small>
-                        </div>
-                    </div>
-                    <div class="data-node-card">
-                        <div class="node-icon"><i class="fas fa-broadcast-tower"></i></div>
-                        <div class="node-info">
-                            <h4>SIGNAL_BEACON</h4>
-                            <small style="color: var(--accent); font-family: var(--font-heading);">ACTIVE</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="svg-flow-container reveal delay-1" style="margin-top: 3rem;">
-                    <svg viewBox="0 0 800 100" style="width: 100%; height: auto;">
-                        <line x1="100" y1="50" x2="700" y2="50" stroke="var(--accent)" stroke-width="1"
-                            stroke-dasharray="8,8" />
-                        <circle cx="100" cy="50" r="8" fill="var(--accent)" />
-                        <circle cx="400" cy="50" r="8" fill="var(--accent)" />
-                        <circle cx="700" cy="50" r="8" fill="var(--accent)" />
-                    </svg>
-                </div>
-            </div>
-        </section>
-
-
-
-        <!-- Section 13: Modernist Gallery (High-Density) -->
-        <section id="modern-gallery" class="v-section">
-            <div class="container">
-                <div class="section-header text-right reveal">
-                    <h2 class="section-title">PRECISION <span>VISUALS</span></h2>
-                    <p>Inside the innovation workshop</p>
-                </div>
-                <div class="dense-mosaic-grid">
-                    <div class="mosaic-cell tall reveal"><img src="ser11.jpg" alt="Tech 1"></div>
-                    <div class="mosaic-cell reveal delay-1"><img src="ser4.jpg" alt="Tech 2"></div>
-                    <div class="mosaic-cell reveal delay-2"><img src="ser5.jpg" alt="Tech 3"></div>
-                    <div class="mosaic-cell wide reveal delay-3"><img src="ser9.jpg" alt="Tech 4"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 14: Component Showcase (3D Cards) -->
-        <section id="components" class="v-section">
-            <div class="container">
-                <div class="section-header text-center reveal">
-                    <h2 class="section-title">CORE <span>COMPONENTS</span></h2>
-                    <p>The building blocks of performance</p>
-                </div>
-                <div class="isometric-grid">
-                    <div class="iso-card iso-color-1 reveal">
-                        <div class="iso-icon"><i class="fas fa-fan"></i></div>
-                        <h4>TURBO_A1</h4>
-                        <p>Variable geometry optimization.</p>
-                    </div>
-                    <div class="iso-card iso-color-2 reveal delay-1">
-                        <div class="iso-icon"><i class="fas fa-bolt"></i></div>
-                        <h4>IGNITION_X</h4>
-                        <p>High-voltage plasma discharge.</p>
-                    </div>
-                    <div class="iso-card iso-color-3 reveal delay-2">
-                        <div class="iso-icon"><i class="fas fa-tint"></i></div>
-                        <h4>FLUID_X</h4>
-                        <p>Nano-synthetic lubricant link.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Section 16: Elite Access (Security Gate) -->
+        <!-- Section 6: Elite Access (Security Gate) -->
         <section id="elite-access" class="v-section">
             <div class="container">
                 <div class="split-layout" style="align-items: center;">
@@ -466,59 +251,8 @@
             </div>
         </section>
 
-        <!-- Section 17: Grid FAQ (Non-linear) -->
-        <section id="grid-faq" class="v-section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <h2 class="section-title">QUERY <span>NODES</span></h2>
-                    <p>Processed system documentation</p>
-                </div>
-                <div class="faq-grid"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                    <div class="faq-node reveal"
-                        style="background: var(--bg-card); padding: 2rem; border-left: 2px solid var(--accent);">
-                        <h4 style="font-family: var(--font-heading); color: var(--accent); margin-bottom: 1rem;">
-                            OTA_UPDATES?</h4>
-                        <p>We provide over-the-air tuning updates for supported ECU models.</p>
-                    </div>
-                    <div class="faq-node reveal delay-1"
-                        style="background: var(--bg-card); padding: 2rem; border-left: 2px solid var(--accent);">
-                        <h4 style="font-family: var(--font-heading); color: var(--accent); margin-bottom: 1rem;">
-                            WARRANTY_LOG?</h4>
-                        <p>All precision tuning is logged and backed by our performance guarantee.</p>
-                    </div>
-                    <div class="faq-node reveal delay-2"
-                        style="background: var(--bg-card); padding: 2rem; border-left: 2px solid var(--accent);">
-                        <h4 style="font-family: var(--font-heading); color: var(--accent); margin-bottom: 1rem;">
-                            DATA_ENCRYPTION?</h4>
-                        <p>Your vehicle's telemetry data is encrypted at the sub-atomic level.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Section 18: Device Sync (Mockup) -->
-        <section id="device-sync" class="v-section" style="background: rgba(0, 212, 255, 0.02);">
-            <div class="container">
-                <div class="sync-layout" style="display: flex; align-items: center; gap: 4rem; flex-wrap: wrap;">
-                    <div class="sync-text reveal" style="flex: 1; min-width: 300px;">
-                        <h2 class="section-title">OMNI <span>SYNC</span></h2>
-                        <p>Track your car's vital signs from any terminal. Desktop, Tablet, or Mobile — your data
-                            follows the mission.</p>
-                    </div>
-                    <div class="sync-visual reveal delay-1"
-                        style="flex: 1; min-width: 300px; display: flex; justify-content: center; gap: 2rem; align-items: flex-end;">
-                        <div class="laptop-mock" style="font-size: 8rem; color: var(--accent); opacity: 0.5;"><i
-                                class="fas fa-laptop-code"></i></div>
-                        <div class="mobile-mock" style="font-size: 4rem; color: var(--accent);"><i
-                                class="fas fa-mobile-alt"></i></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- Section 20: Mega Footer -->
+        <!-- Section 5: Mega Footer -->
         <footer id="mega-footer">
             <div class="container footer-grid">
                 <div class="footer-col reveal">

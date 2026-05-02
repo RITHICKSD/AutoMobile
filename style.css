@@ -80,9 +80,10 @@ nav.container {
 }
 
 #rtl-toggle,
+#theme-toggle,
 .globe-toggle {
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     color: var(--text-main);
     cursor: pointer;
     transition: var(--transition);
@@ -92,18 +93,27 @@ nav.container {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 #rtl-toggle:hover,
+#theme-toggle:hover,
 .globe-toggle:hover {
     color: var(--primary);
     background: rgba(255, 215, 0, 0.1);
-    transform: rotate(15deg);
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 #rtl-toggle i,
+#theme-toggle i,
 .globe-toggle i {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .hamburger {
@@ -180,6 +190,10 @@ nav.container {
 }
 
 @media (max-width: 992px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
     .desktop-only {
         display: none !important;
     }
@@ -237,10 +251,9 @@ nav.container {
 
 #rtl-toggle,
 #theme-toggle {
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     color: var(--text-main);
-    font-size: 1.2rem;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
@@ -2035,6 +2048,16 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
 
 /* Responsive */
 @media (max-width: 992px) {
+    .logo a {
+        font-size: 1.4rem;
+        letter-spacing: 1px;
+        gap: 0.4rem;
+    }
+
+    .header-actions {
+        gap: 0.8rem;
+    }
+
     .hamburger {
         display: flex;
     }
@@ -2177,7 +2200,74 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
     }
 }
 
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .logo a {
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+
+    .logo a i {
+        font-size: 1rem;
+        padding: 0.2rem;
+    }
+
+    .header-actions {
+        gap: 0.4rem;
+    }
+
+    #rtl-toggle,
+    #theme-toggle,
+    .globe-toggle {
+        width: 34px;
+        height: 34px;
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo a {
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        gap: 0.2rem;
+    }
+
+    .logo a i {
+        font-size: 0.9rem;
+        padding: 0.15rem;
+    }
+
+    .header-actions {
+        gap: 0.2rem;
+    }
+
+    #rtl-toggle,
+    #theme-toggle,
+    .globe-toggle {
+        width: 30px;
+        height: 30px;
+        font-size: 0.5rem;
+    }
+}
+
 @media (max-width: 768px) {
+    .logo a {
+        font-size: 1.2rem;
+        gap: 0.3rem;
+    }
+
+    .logo a i {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+    }
+
+    .header-actions {
+        gap: 0.5rem;
+    }
+
     .section-title {
         font-size: 1.8rem;
         letter-spacing: 1px;

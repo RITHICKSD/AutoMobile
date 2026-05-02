@@ -1043,17 +1043,29 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // --- RTL/LTR Toggle ---
-    rtlToggle.addEventListener('click', () => {
-        currentDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
-        document.documentElement.dir = currentDir;
-        localStorage.setItem('docDir', currentDir);
-
-        const activeItem = document.querySelector('.sidebar-nav li.active');
-        if (activeItem) {
-            const activeView = activeItem.getAttribute('data-view');
-            switchView(activeView);
+    function updateRTLText(dir) {
+        if (rtlToggle) {
+            const span = rtlToggle.querySelector('span');
+            if (span) span.textContent = dir.toUpperCase();
         }
-    });
+    }
+
+    if (rtlToggle) {
+        rtlToggle.addEventListener('click', () => {
+            currentDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
+            document.documentElement.dir = currentDir;
+            localStorage.setItem('docDir', currentDir);
+
+            // Update text
+            updateRTLText(currentDir);
+
+            const activeItem = document.querySelector('.sidebar-nav li.active');
+            if (activeItem) {
+                const activeView = activeItem.getAttribute('data-view');
+                switchView(activeView);
+            }
+        });
+    }
 
     // --- Theme Toggle ---
     const themeToggle = document.getElementById('dashboard-theme-toggle');
@@ -1093,5 +1105,6 @@ document.addEventListener('DOMContentLoaded', function () {
     if (savedDir) {
         currentDir = savedDir;
         document.documentElement.dir = currentDir;
+        updateRTLText(currentDir);
     }
 });

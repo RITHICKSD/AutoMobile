@@ -63,6 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
         updateThemeIcons(true);
     }
 
+    function updateRTLText(dir) {
+        const rtlToggles = document.querySelectorAll('#rtl-toggle, #dashboard-rtl-toggle');
+        rtlToggles.forEach(t => {
+            const span = t.querySelector('span');
+            if (span) {
+                span.textContent = dir.toUpperCase();
+            }
+        });
+    }
+
     // RTL Toggle Logic
     if (rtlToggle) {
         rtlToggle.addEventListener('click', () => {
@@ -71,16 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
             html.setAttribute('dir', newDir);
             html.setAttribute('lang', newDir === 'rtl' ? 'ar' : 'en');
 
-            // Save preference
-            localStorage.setItem('dir', newDir);
+            // Update text
+            updateRTLText(newDir);
+
+    // Save preference
+            localStorage.setItem('docDir', newDir);
         });
     }
 
     // Check saved RTL preference
-    const savedDir = localStorage.getItem('dir');
+    const savedDir = localStorage.getItem('docDir');
     if (savedDir) {
         html.setAttribute('dir', savedDir);
         html.setAttribute('lang', savedDir === 'rtl' ? 'ar' : 'en');
+        updateRTLText(savedDir);
     }
 
     // Scroll Animations (Basic implementation)

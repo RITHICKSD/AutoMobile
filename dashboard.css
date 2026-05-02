@@ -160,17 +160,27 @@
 }
 
 .globe-toggle {
-    background: none;
-    border: none;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
     color: #fff;
-    font-size: 1.2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-size: 0.7rem;
+    font-weight: 700;
     cursor: pointer;
     transition: var(--transition);
 }
 
 .globe-toggle:hover {
     color: var(--primary);
-    transform: rotate(15deg);
+    border-color: var(--primary);
+    background: rgba(255, 94, 0, 0.1);
+    transform: translateY(-2px);
 }
 
 /* Main Main */

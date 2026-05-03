@@ -230,6 +230,11 @@
     gap: 2rem;
 }
 
+.header-toggles {
+    display: none;
+    gap: 1rem;
+}
+
 .system-status {
     display: flex;
     align-items: center;
@@ -661,6 +666,14 @@
 
     .system-status {
         display: none;
+    }
+
+    .header-toggles {
+        display: flex;
+    }
+
+    .sidebar-footer {
+        display: none !important;
     }
 }
 

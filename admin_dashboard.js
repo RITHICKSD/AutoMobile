@@ -10,7 +10,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const navItems = document.querySelectorAll('.sidebar-nav li:not(.logout-item)');
     const viewport = document.getElementById('dashboard-content');
     const viewTitle = document.getElementById('current-view-title');
-    const rtlToggle = document.getElementById('dashboard-rtl-toggle');
+    const rtlToggles = [
+        document.getElementById('dashboard-rtl-toggle'),
+        document.getElementById('admin-header-rtl-toggle')
+    ].filter(el => el);
 
     // --- Initialization ---
     setTimeout(() => {
@@ -1044,14 +1047,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // --- RTL/LTR Toggle ---
     function updateRTLText(dir) {
-        if (rtlToggle) {
-            const span = rtlToggle.querySelector('span');
+        rtlToggles.forEach(btn => {
+            const span = btn.querySelector('span');
             if (span) span.textContent = dir.toUpperCase();
-        }
+        });
     }
 
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
+    rtlToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
             currentDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             document.documentElement.dir = currentDir;
             localStorage.setItem('docDir', currentDir);
@@ -1065,39 +1068,44 @@ document.addEventListener('DOMContentLoaded', function () {
                 switchView(activeView);
             }
         });
-    }
+    });
 
     // --- Theme Toggle ---
-    const themeToggle = document.getElementById('dashboard-theme-toggle');
+    const themeToggles = [
+        document.getElementById('dashboard-theme-toggle'),
+        document.getElementById('admin-header-theme-toggle')
+    ].filter(el => el);
     const body = document.body;
 
     function updateThemeIcon(isLight) {
-        const icon = themeToggle.querySelector('i');
-        if (icon) {
-            if (isLight) {
-                icon.classList.remove('fa-moon');
-                icon.classList.add('fa-sun');
-            } else {
-                icon.classList.remove('fa-sun');
-                icon.classList.add('fa-moon');
+        themeToggles.forEach(btn => {
+            const icon = btn.querySelector('i');
+            if (icon) {
+                if (isLight) {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                }
             }
-        }
+        });
     }
 
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
+    themeToggles.forEach(btn => {
+        btn.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             const isLight = body.classList.contains('light-mode');
             localStorage.setItem('theme', isLight ? 'light' : 'dark');
             updateThemeIcon(isLight);
         });
-    }
+    });
 
     // Check saved theme
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'light') {
         body.classList.add('light-mode');
-        if (themeToggle) updateThemeIcon(true);
+        updateThemeIcon(true);
     }
 
     // Handle initial direction

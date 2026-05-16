@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTER | AUTOCORE Tactical</title>
+    <title>REGISTER | AUTOCORE Service Center</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -18,20 +18,22 @@
 <body class="auth-page">
     <div class="auth-bg"></div>
 
+    <!-- Icons placed at top-right of page, outside the card -->
+    <div class="auth-header-tools">
+        <button id="auth-theme-toggle" class="globe-toggle" title="Toggle Light/Dark Mode">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button id="rtl-toggle" class="globe-toggle" title="Toggle LTR/RTL">
+            <span>LTR</span>
+        </button>
+    </div>
+
     <div class="auth-card reveal">
-        <div class="auth-header-tools">
-            <button id="auth-theme-toggle" class="globe-toggle" title="Toggle Light/Dark Mode">
-                <i class="fas fa-moon"></i>
-            </button>
-            <button id="rtl-toggle" class="globe-toggle" title="Toggle LTR/RTL">
-                <span>LTR</span>
-            </button>
-        </div>
         <div class="auth-brand">
-            <div class="logo" style="justify-content: center;">
+            <div class="logo" style="justify-content: center; margin-bottom: 0.75rem;">
                 <a href="index.html" style="text-decoration: none; color: inherit;"><i class="fas fa-shield-halved"></i> AUTO<span>CORE</span></a>
             </div>
-            <p>New Command Uplink</p>
+            <p>Create your account</p>
         </div>
 
         <form class="auth-form" action="dashboard.html">
@@ -39,7 +41,7 @@
                 <label>Full Name</label>
                 <div class="input-wrapper">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Commander Name" required>
+                    <input type="text" placeholder="Your full name" required>
                 </div>
             </div>
 
@@ -47,7 +49,7 @@
                 <label>Email Address</label>
                 <div class="input-wrapper">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="commander@autocore.tactical" required>
+                    <input type="email" placeholder="your@email.com" required>
                 </div>
             </div>
 
@@ -60,32 +62,31 @@
             </div>
 
             <div class="form-group">
-                <label>Access Code</label>
+                <label>Password</label>
                 <div class="input-wrapper">
                     <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Create secret code" required>
+                    <input type="password" placeholder="Create a password" required>
                 </div>
             </div>
 
             <div class="form-group">
-                <label>Confirm Access Code</label>
+                <label>Confirm Password</label>
                 <div class="input-wrapper">
                     <i class="fas fa-shield-alt"></i>
-                    <input type="password" placeholder="Verify secret code" required>
+                    <input type="password" placeholder="Confirm your password" required>
                 </div>
             </div>
 
             <label class="legal-check">
                 <input type="checkbox" required>
-                <span>I authorize tactical data processing and agree to the <a href="#">Terms of Command</a> and <a
-                        href="#">Privacy Protocol</a>.</span>
+                <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</span>
             </label>
 
-            <button type="submit" class="auth-submit">Create Uplink</button>
+            <button type="submit" class="auth-submit">Create Account</button>
         </form>
 
         <div class="auth-footer">
-            Already have an active session? <a href="login.html">Login here</a>
+            Already have an account? <a href="login.html">Sign in here</a>
         </div>
     </div>
 

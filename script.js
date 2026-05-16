@@ -1,25 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const rtlToggle = document.getElementById('rtl-toggle');
     const html = document.documentElement;
 
-    // Active Page Highlighting
+    // ── Active Page Highlighting ──────────────────────────────────────────────
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinksList = document.querySelectorAll('.nav-links a');
-
-    navLinksList.forEach(link => {
-        // Remove existing active class
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
-        
         const href = link.getAttribute('href');
         if (!href) return;
-
         const linkPath = href.split('/').pop();
-        
-        // Match path
         if (linkPath === currentPath || (currentPath === '' && linkPath === 'index.html')) {
             link.classList.add('active');
-            
-            // Highlight parent dropdown if exists
             const dropdown = link.closest('.dropdown');
             if (dropdown) {
                 const dropbtn = dropdown.querySelector('.dropbtn');
@@ -28,21 +18,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Theme Toggle Logic
-    const themeToggles = document.querySelectorAll('#theme-toggle, #dashboard-theme-toggle, #auth-theme-toggle');
+    // ── Theme Toggle (all buttons across all pages) ───────────────────────────
+    const THEME_SELECTOR = [
+        '#theme-toggle',
+        '#theme-toggle-nav',
+        '#dashboard-theme-toggle',
+        '#dashboard-header-theme-toggle',
+        '#auth-theme-toggle'
+    ].join(', ');
+
+    const themeToggles = document.querySelectorAll(THEME_SELECTOR);
     const body = document.body;
 
     function updateThemeIcons(isLight) {
         themeToggles.forEach(t => {
             const icon = t.querySelector('i');
             if (icon) {
-                if (isLight) {
-                    icon.classList.remove('fa-moon');
-                    icon.classList.add('fa-sun');
-                } else {
-                    icon.classList.remove('fa-sun');
-                    icon.classList.add('fa-moon');
-                }
+                icon.classList.toggle('fa-moon', !isLight);
+                icon.classList.toggle('fa-sun',  isLight);
             }
         });
     }
@@ -56,40 +49,39 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Check saved theme
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
+    // Restore saved theme
+    if (localStorage.getItem('theme') === 'light') {
         body.classList.add('light-mode');
         updateThemeIcons(true);
     }
 
+    // ── RTL Toggle (all buttons across all pages) ─────────────────────────────
+    const RTL_SELECTOR = [
+        '#rtl-toggle',
+        '#rtl-toggle-nav',
+        '#dashboard-rtl-toggle',
+        '#dashboard-header-rtl-toggle'
+    ].join(', ');
+
     function updateRTLText(dir) {
-        const rtlToggles = document.querySelectorAll('#rtl-toggle, #dashboard-rtl-toggle');
-        rtlToggles.forEach(t => {
+        document.querySelectorAll(RTL_SELECTOR).forEach(t => {
             const span = t.querySelector('span');
-            if (span) {
-                span.textContent = dir.toUpperCase();
-            }
+            if (span) span.textContent = dir.toUpperCase();
         });
     }
 
-    // RTL Toggle Logic
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
-            const currentDir = html.getAttribute('dir');
+    document.querySelectorAll(RTL_SELECTOR).forEach(toggle => {
+        toggle.addEventListener('click', () => {
+            const currentDir = html.getAttribute('dir') || 'ltr';
             const newDir = currentDir === 'ltr' ? 'rtl' : 'ltr';
             html.setAttribute('dir', newDir);
             html.setAttribute('lang', newDir === 'rtl' ? 'ar' : 'en');
-
-            // Update text
             updateRTLText(newDir);
-
-    // Save preference
             localStorage.setItem('docDir', newDir);
         });
-    }
+    });
 
-    // Check saved RTL preference
+    // Restore saved direction
     const savedDir = localStorage.getItem('docDir');
     if (savedDir) {
         html.setAttribute('dir', savedDir);
@@ -97,105 +89,92 @@ document.addEventListener('DOMContentLoaded', () => {
         updateRTLText(savedDir);
     }
 
-    // Scroll Animations (Basic implementation)
-    const observerOptions = {
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries) => {
+    // ── Scroll Reveal ─────────────────────────────────────────────────────────
+    const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
+            if (entry.isIntersecting) entry.target.classList.add('active');
         });
-    }, observerOptions);
+    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    // Stats Counter Animation
+    // ── Stats Counter Animation ───────────────────────────────────────────────
     const statsSection = document.getElementById('stats');
-    const statsObserver = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) {
-            document.querySelectorAll('.stat-item .number').forEach(counter => {
-                const target = +counter.parentElement.getAttribute('data-count');
-                const updateCount = () => {
-                    const count = +counter.innerText;
-                    const speed = 200;
-                    const inc = target / speed;
+    if (statsSection) {
+        const statsObserver = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) {
+                document.querySelectorAll('.stat-item .number').forEach(counter => {
+                    const target = +counter.parentElement.getAttribute('data-count');
+                    const update = () => {
+                        const count = +counter.innerText;
+                        const inc = target / 200;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + inc);
+                            setTimeout(update, 1);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    update();
+                });
+                statsObserver.unobserve(statsSection);
+            }
+        }, { threshold: 0.5 });
+        statsObserver.observe(statsSection);
+    }
 
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc);
-                        setTimeout(updateCount, 1);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-                updateCount();
-            });
-            statsObserver.unobserve(statsSection);
-        }
-    }, { threshold: 0.5 });
-
-    if (statsSection) statsObserver.observe(statsSection);
-
-    // FAQ Interactions
+    // ── FAQ Accordion ─────────────────────────────────────────────────────────
     document.querySelectorAll('.faq-question').forEach(q => {
-        q.addEventListener('click', () => {
-            const item = q.parentElement;
-            item.classList.toggle('active');
-        });
+        q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
     });
 
-    // Mobile Menu Toggle
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+    // ── Mobile Hamburger Menu ─────────────────────────────────────────────────
+    const hamburger  = document.querySelector('.hamburger');
+    const navLinks   = document.querySelector('.nav-links');
+    const mobileControls = document.querySelector('.mobile-nav-controls');
 
     if (hamburger && navLinks) {
-        hamburger.addEventListener('click', (e) => {
+        const openMenu = () => {
+            hamburger.classList.add('active');
+            navLinks.classList.add('active');
+            if (mobileControls) mobileControls.classList.add('active');
+        };
+
+        const closeMenu = () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+            if (mobileControls) mobileControls.classList.remove('active');
+            navLinks.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+        };
+
+        hamburger.addEventListener('click', e => {
             e.stopPropagation();
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
+            navLinks.classList.contains('active') ? closeMenu() : openMenu();
         });
 
-        // Close menu/toggle dropdowns when clicking links
         navLinks.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const isDropdown = link.classList.contains('dropbtn');
-                const isMobile = window.innerWidth <= 992;
+            link.addEventListener('click', e => {
+                const isDropbtn = link.classList.contains('dropbtn');
+                const isMobile  = window.innerWidth <= 992;
 
-                if (isDropdown) {
+                if (isDropbtn) {
                     e.preventDefault();
                     e.stopPropagation();
                     const parent = link.parentElement;
-
-                    // Close other dropdowns
                     navLinks.querySelectorAll('.dropdown').forEach(d => {
                         if (d !== parent) d.classList.remove('active');
                     });
-
                     parent.classList.toggle('active');
                 } else {
-                    // Selection made or normal link clicked
-                    // Close all dropdowns
                     navLinks.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-
-                    if (isMobile) {
-                        hamburger.classList.remove('active');
-                        navLinks.classList.remove('active');
-                    }
+                    if (isMobile) closeMenu();
                 }
             });
         });
 
-        // Close dropdowns/menu when clicking outside
-        document.addEventListener('click', (e) => {
-            const isClickInsideMenu = navLinks.contains(e.target);
-            const isClickOnHamburger = hamburger.contains(e.target);
-
-            if (!isClickInsideMenu && !isClickOnHamburger) {
-                hamburger.classList.remove('active');
-                navLinks.classList.remove('active');
-                navLinks.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
+        document.addEventListener('click', e => {
+            if (!navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
             }
         });
     }

@@ -442,18 +442,27 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
 /* Section Titles */
 .section-title {
     font-size: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
     text-align: center;
     letter-spacing: 3px;
     padding: 0 2rem;
-    /* Increased padding for wide fonts */
     overflow-wrap: break-word;
     word-break: keep-all;
-    /* Avoid breaking individual words if possible */
 }
 
 .section-title span {
     color: var(--primary);
+}
+
+/* Section subtitle paragraphs — always centred under title */
+.section-header p,
+.v-section > .container > p,
+.section-header + p {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
 }
 
 
@@ -977,7 +986,29 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
     font-size: 3rem;
     font-weight: 800;
     margin: 1.5rem 0;
-    color: #fff;
+    color: var(--text-main);
+}
+
+/* Fix price & features visibility in light mode */
+body.light-mode .price {
+    color: #0f172a !important;
+}
+
+body.light-mode .features li {
+    color: #475569 !important;
+}
+
+body.light-mode .package-card {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.12) !important;
+}
+
+body.light-mode .package-card.popular {
+    border-color: var(--primary) !important;
+}
+
+body.light-mode .card-tag {
+    color: #fff !important;
 }
 
 .features {
@@ -1702,6 +1733,34 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
     color: #fff;
 }
 
+/* Fix booking form in light mode */
+body.light-mode .booking-form {
+    background: #ffffff !important;
+    border-color: rgba(0,0,0,0.1) !important;
+}
+
+body.light-mode .booking-form .form-group input,
+body.light-mode .booking-form .form-group select {
+    background: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    color: #0f172a !important;
+}
+
+body.light-mode .booking-form .form-group input::placeholder {
+    color: #94a3b8 !important;
+}
+
+body.light-mode .booking-info h2,
+body.light-mode .booking-info p,
+body.light-mode .availability-meter > span,
+body.light-mode .small-val {
+    color: #0f172a !important;
+}
+
+body.light-mode .meter-bg {
+    background: #e2e8f0 !important;
+}
+
 /* Date picker specific */
 .booking-form input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1) brightness(0.8);
@@ -1779,6 +1838,8 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
 
 .newsletter-form {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0;
 }
 
 .newsletter-form input {
@@ -1829,6 +1890,28 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
 
 #mega-footer .footer-col:first-child .logo {
     margin-bottom: 1.5rem;
+}
+
+/* Fix footer phone icon — do NOT mirror it in RTL */
+[dir="rtl"] .contact-list .fa-phone-alt,
+[dir="rtl"] .contact-list .fa-phone {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+/* Fix newsletter form alignment at 1024px */
+@media (max-width: 1024px) {
+    .newsletter-form {
+        flex-direction: column;
+    }
+    .newsletter-form input {
+        border-radius: 4px 4px 0 0;
+        min-width: 100%;
+    }
+    .newsletter-form button {
+        border-radius: 0 0 4px 4px;
+        width: 100%;
+    }
 }
 
 /* Responsive Overrides */
@@ -2321,13 +2404,50 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
     .header-actions {
         gap: 0.2rem;
     }
+}
 
-    #rtl-toggle,
-    #theme-toggle,
-    .globe-toggle {
-        width: 30px;
-        height: 30px;
-        font-size: 0.5rem;
+/* Mobile nav controls — row that slides in at bottom of hamburger drawer */
+.mobile-nav-controls {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-card);
+    border-top: 1px solid var(--glass-border);
+}
+
+@media (max-width: 992px) {
+    .mobile-nav-controls {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        right: -300px;
+        width: 300px;
+        padding: 1.2rem 3rem;
+        border-left: 1px solid var(--glass-border);
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+        z-index: 1002;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-nav-controls.active {
+        right: 0;
+    }
+
+    [dir="rtl"] .mobile-nav-controls {
+        right: auto;
+        left: -300px;
+        border-left: none;
+        border-right: 1px solid var(--glass-border);
+    }
+
+    [dir="rtl"] .mobile-nav-controls.active {
+        left: 0;
+    }
+
+    /* Hide theme/RTL from header bar on mobile — they live in the drawer */
+    .header-actions > #theme-toggle,
+    .header-actions > #rtl-toggle {
+        display: none !important;
     }
 }
 
@@ -2498,22 +2618,13 @@ body {
     background-color: var(--bg-dark);
 }
 
-/* Apply technical font globally to Home 2 */
-.home-2,
-.home-2 p,
-.home-2 a,
-.home-2 span:not([class*="fa-"]),
-.home-2 div,
-.home-2 li,
+/* Apply Orbitron font ONLY to headings in Home 2 — not body text/inputs */
 .home-2 h1,
 .home-2 h2,
 .home-2 h3,
 .home-2 h4,
 .home-2 h5,
-.home-2 h6,
-.home-2 input,
-.home-2 button,
-.home-2 textarea {
+.home-2 h6 {
     font-family: var(--font-heading) !important;
 }
 

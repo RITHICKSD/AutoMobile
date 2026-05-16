@@ -780,3 +780,49 @@ body.light-mode .tactical-radar {
 body.light-mode .sidebar-footer {
     border-top-color: var(--glass-border);
 }
+
+/* Dashboard header contrast fix for light mode */
+body.light-mode .dashboard-header {
+    background: #ffffff !important;
+    border-bottom: 1px solid rgba(0,0,0,0.1) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+body.light-mode .dashboard-header h2,
+body.light-mode #current-view-title {
+    color: #0f1113 !important;
+}
+
+body.light-mode .icon-btn {
+    color: #475569 !important;
+}
+
+body.light-mode .icon-btn:hover {
+    color: #0f1113 !important;
+}
+
+body.light-mode .dashboard-sidebar {
+    background: #ffffff !important;
+    border-right-color: rgba(0,0,0,0.1) !important;
+}
+
+body.light-mode .sidebar-nav li a {
+    color: #475569 !important;
+}
+
+body.light-mode .sidebar-nav li:hover a {
+    background: rgba(255,94,0,0.07) !important;
+    color: #0f1113 !important;
+}
+
+body.light-mode .sidebar-nav li.active a {
+    background: var(--primary) !important;
+    color: #ffffff !important;
+}
+
+body.light-mode .header-toggles .globe-toggle,
+body.light-mode .sidebar-footer .globe-toggle {
+    color: #0f1113 !important;
+    border-color: rgba(0,0,0,0.15) !important;
+    background: rgba(0,0,0,0.04) !important;
+}

@@ -43,6 +43,16 @@
                 <li class="mobile-only"><a href="login.html" class="nav-login">Login</a></li>
             </ul>
 
+            <!-- Mobile theme / RTL controls (appear inside hamburger drawer) -->
+            <div class="mobile-nav-controls">
+                <button id="theme-toggle-nav" class="globe-toggle" title="Toggle Light/Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="rtl-toggle-nav" class="globe-toggle" title="Toggle LTR/RTL">
+                    <span>LTR</span>
+                </button>
+            </div>
+
             <div class="header-actions">
                 <a href="login.html" class="login-btn desktop-only">Login</a>
                 <button id="theme-toggle" class="globe-toggle" title="Toggle Light/Dark Mode">
@@ -66,7 +76,7 @@
             <div class="hero-bg-container"></div>
             <div class="container hero-layout">
                 <div class="hero-content">
-                    <h1 class="reveal">REVIVE YOUR <span>ENGINE'S</span> SOUL</h1>
+                    <h1 class="reveal" style="font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1.1;">YOUR VEHICLE, <span>EXPERTLY</span> SERVICED</h1>
                     <h4 class="reveal"
                         style="color: var(--primary); margin-bottom: 1rem; letter-spacing: 3px; font-weight: 700; text-transform: uppercase; font-size: 0.9rem;">
                         MISSION-CRITICAL PERFORMANCE TUNING</h4>
@@ -74,8 +84,8 @@
                         systems and master-tier technicians ensure your machine operates at peak tactical efficiency. No
                         compromises. No shortcuts. Just raw, unadulterated power.</p>
                     <div class="cta-group reveal delay-2">
-                        <a href="#booking" class="btn btn-primary">Book Mission</a>
-                        <a href="#specialization" class="btn btn-outline">Analyze Data</a>
+                        <a href="#booking" class="btn btn-primary">Book a Service</a>
+                        <a href="services.html" class="btn btn-outline">Our Services</a>
                     </div>
                 </div>
                 <div class="hero-data-grid reveal delay-3">
@@ -194,13 +204,13 @@
         <!-- Section 5: Maintenance Packages -->
         <section id="packages" class="v-section">
             <div class="container">
-                <h2 class="section-title">CHOOSE YOUR <span>MISSION</span></h2>
+                <h2 class="section-title">CHOOSE YOUR <span>SERVICE PLAN</span></h2>
                 <div class="package-grid">
                     <div class="package-card reveal">
                         <div class="card-header">
                             <h3>Basic Gear</h3>
                         </div>
-                        <div class="price">$199<span>/serv</span></div>
+                        <div class="price">$199<span>/service</span></div>
                         <ul class="features">
                             <li>Oil & Filter Change</li>
                             <li>Brake Inspection</li>
@@ -213,7 +223,7 @@
                         <div class="card-header">
                             <h3>Pro Performance</h3>
                         </div>
-                        <div class="price">$499<span>/serv</span></div>
+                        <div class="price">$499<span>/service</span></div>
                         <ul class="features">
                             <li>All Basic Gear features</li>
                             <li>Engine Health Sync</li>
@@ -225,7 +235,7 @@
                         <div class="card-header">
                             <h3>Elite Overhaul</h3>
                         </div>
-                        <div class="price">$999<span>/serv</span></div>
+                        <div class="price">$999<span>/service</span></div>
                         <ul class="features">
                             <li>All Pro Performance features</li>
                             <li>Track-Ready Calibration</li>
@@ -276,7 +286,7 @@
                                 <input type="date" required>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Confirm Mission</button>
+                        <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
                     </form>
                 </div>
             </div>

@@ -933,8 +933,10 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
 .package-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    align-items: start;
+    gap: 1.5rem;
+    align-items: stretch;
+    padding: 1.2rem 0.5rem;
+    overflow: visible;
 }
 
 .stage-grid {
@@ -952,7 +954,7 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
 
 .package-card {
     background: var(--bg-card);
-    padding: 3rem 2rem;
+    padding: 1.8rem 1.5rem;
     border-radius: 8px;
     text-align: center;
     border: 1px solid var(--glass-border);
@@ -961,31 +963,37 @@ body.light-mode .v-section:not(#hero):not(#vortex-hero):not(#about-hero):not(#se
 }
 
 .package-card.popular {
-    transform: scale(1.05);
+    transform: scale(1.02);
     border-color: var(--primary);
     box-shadow: var(--glow);
+    z-index: 1;
 }
 
 .package-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
+}
+
+.package-card.popular:hover {
+    transform: scale(1.02) translateY(-8px);
 }
 
 .card-tag {
     position: absolute;
-    top: -15px;
+    top: -13px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--primary);
-    padding: 0.3rem 1.5rem;
+    padding: 0.25rem 1.2rem;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.72rem;
     font-weight: bold;
+    white-space: nowrap;
 }
 
 .price {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
-    margin: 1.5rem 0;
+    margin: 1rem 0;
     color: var(--text-main);
 }
 
@@ -1013,8 +1021,10 @@ body.light-mode .card-tag {
 
 .features {
     list-style: none;
-    margin-bottom: 2rem;
+    margin-bottom: 1.2rem;
     color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.8;
 }
 
 /* Section 8: Marquee */
@@ -1838,21 +1848,28 @@ body.light-mode .meter-bg {
 
 .newsletter-form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: stretch;
     gap: 0;
+    width: 100%;
 }
 
 .newsletter-form input {
     flex: 1;
+    min-width: 0;
     padding: 1rem;
     background: var(--secondary);
     border: 1px solid var(--glass-border);
+    border-right: none;
     color: #fff;
     font-family: var(--font-heading);
     font-size: 0.8rem;
+    border-radius: 4px 0 0 4px;
 }
 
 .newsletter-form button {
+    flex-shrink: 0;
     padding: 1rem 1.5rem;
     background: var(--primary);
     border: none;
@@ -1861,6 +1878,10 @@ body.light-mode .meter-bg {
     font-family: var(--font-heading);
     font-weight: 700;
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4px 4px 0;
 }
 
 .footer-bottom {
@@ -1892,25 +1913,33 @@ body.light-mode .meter-bg {
     margin-bottom: 1.5rem;
 }
 
-/* Fix footer phone icon — do NOT mirror it in RTL */
+/* Fix footer phone icon — ensure it is always displayed correctly (not mirrored) */
 [dir="rtl"] .contact-list .fa-phone-alt,
 [dir="rtl"] .contact-list .fa-phone {
     display: inline-block;
-    transform: scaleX(-1);
+    transform: none;
 }
 
-/* Fix newsletter form alignment at 1024px */
-@media (max-width: 1024px) {
-    .newsletter-form {
-        flex-direction: column;
+/* Fix package-grid: tablet — 2-col wrap */
+@media (max-width: 1200px) {
+    .package-grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+        padding: 1.5rem 0;
     }
-    .newsletter-form input {
-        border-radius: 4px 4px 0 0;
-        min-width: 100%;
+
+    .package-card.popular {
+        transform: scale(1) !important;
     }
-    .newsletter-form button {
-        border-radius: 0 0 4px 4px;
-        width: 100%;
+}
+
+/* Fix package-grid: mobile — single column */
+@media (max-width: 640px) {
+    .package-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 420px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.5rem 0;
     }
 }
 
@@ -2137,6 +2166,20 @@ body.light-mode .meter-bg {
     display: flex;
     align-items: center;
     position: relative;
+    overflow: visible;
+}
+
+/* Packages section needs extra vertical room for the scaled popular card */
+#packages {
+    overflow: visible !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#packages .container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    overflow: visible;
 }
 
 .service-content {
